@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Loading : Tarayıcının bir goruntuyu hemen mi yuklesin yoksa bazi kosullar karsilanana kadar goruntunun yuklenmesini erteleyip ertelemeyecegini belirler.-->
+    <h1> HTML img</h1>
+    
+    <h2>Example</h2>
+    <img src="https://picsum.photos/200/300" alt="">
+    
+    <h2>IMG Attribute</h2>
+     <!-- alt gorsel icin yapilacak aciklama alanidir, 
+      width - hrigh gerseli boyutlandirmak icin kullanilir. -->
+       
+    <h3>The <code>alt</code> Attribute</h3>
+    <img src="XBlock.jpg" width="175" height="300"  alt="">
+    
+    <h3>The <code>srcset</code> Attribute</h3>
+    <!-- Mevcut gorseli daha iyi kalitede kullanabilmek icin kullanilir.
+    tarayici otomatik islem yapmaktadir
+    -->
+    <!-- Görüntünün yüklenmesini, tarayıcı t
+    <P>Iki gorsel arasinda gortuntu kalitesi - Pixel degisikligi belirgin bir sekil gorulebiliyor.</P>      
+    <img src="XBlock.jpg" width="175" height="300" srcset="XBlock.jpg, XBlock@2x.jpg 2x, XBlock@3x.jpg 3x">
+    
+    <h3>The <code>Loading</code> Attribuarafından tanımlandığı gibi, görüntüleme alanından hesaplanmış bir mesafeye ulaşana kadar erteler. Amaç, görüntünün işlenmesi için gereken ağ ve depolama bant genişliğinden, ihtiyaç duyulacağı makul ölçüde kesinleşene kadar kaçınmaktır. Bu, genellikle çoğu tipik kullanım durumunda içeriğin performansını iyileştirir. -->
+        <img src="XBlock.jpg" width="175" height="300"  loading="lazy">
+        
+        
+    <h3>The HTML <code>picture</code> Attribute</h3>
+    <!-- yeni nesil,gorseller, gorsel uzantilari, dosya formatlari   ayni gorseli bir cok sefer paylasilabilir. Cihaz    tarayiciya uygun formata sahip  olan fotograf kullanir.-->
+        <picture>
+            <source srcset="XBlock.jpg" type="XBlock/jpeg"  width="950">
+            <source srcset="XBlock.webp" type="XBlock/webp"  width="850">
+            <source srcset="XBlock.avif" type="XBlock/avif"  width="750">
+            <source srcset="XBlock.jpg"   width="950">
+        </picture>
+        <p>Lorem ipsum dolor sit.</p>
+</body>
+</html>

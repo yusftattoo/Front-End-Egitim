@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+</head>
+<body>
+    <h1>Tablo Ogeleri</h1>
+    <p><code>&lt;Table&gt;</code>Bir tablo tanimlar</p>
+    <p><code>&lt;th&gt;</code>Taloda bir baslik hucresi tanimlar</p>
+    <p><code>&lt;tr&gt;</code>Tabloda bir satir tanimlar</p>
+    <p><code>&lt;td&gt;</code>Tabloda bir hucreyi tanimlar</p>
+    <p><code>&lt;caption&gt;</code>Bir talo basligi tanimlar</p>
+    <p><code>&lt;colgroup&gt;</code>Bicimlendirme icin tabloda bir veya daha fazla sutundan olusan bir group belirtir</p>
+    <p><code>&lt;col&gt;</code>Bir &lt;colgroup&gt; ogesi icindeki het sutun icin sutun ozelliklerini belirtir</p>
+    <p><code>&lt;thead&gt;</code>Baslik icerigini bir tabloda gruplar</p>
+    <p><code>&lt;tbody&gt;</code>Govde icerigini bir tabloda gruplar</p>
+    <p><code>&lt;tfoot&gt;</code> Altbilgi icerigini bir taloda gruplar</p>
+
+
+    <h1>HTML Tables</h1>
+    <table>
+        <caption>Table</caption>
+        <colgroup> <!-- Span secilen alanin kac satirlik yer sectigimiz belirler -->
+            <col span="2" style="background-color: aquamarine;">
+            <col style="background-color: antiquewhite;">
+            <col style="background-color: bisque;">
+        </colgroup>
+        <thead><!-- Table basligi burada yapilmalidir. -->
+            <tr>
+                <th>Pazartesi</th>
+                <th>Sali</th>
+                <th>Carsamba</th>
+                <th>Persembe</th>
+                <th>Cuma</th>
+                <th>Cumartesi</th>
+                <th>Pazar</th>
+            </tr>
+        </thead> 
+        <tbody> <!-- Table kendisine birsey yapilacaksa bodyden yapilmalidir. -->
+            <tr> <!-- hucreleri birlestırirken birlestirecegimiz diger hucreyi sileriz <td>2</td> gibi. -->
+               <td colspan="2">1</td> <!-- colspan yatay birlaştirme yapar-->
+               <!-- <td>2</td> -->
+               <td rowspan="2">3</td> <!-- rowspan yatayda birlestirme yapar-->
+               <td>4</td>
+               <td>5</td>
+               <td>6</td>
+               <td>7</td>
+           </tr>
+           <tr>
+               <td>8</td>
+               <td>9</td>
+               <td>10</td>
+               <td>11</td>
+               <td>12</td>
+               <td>13</td>
+               <td>14</td>
+            </tr>
+           <tr>
+               <td>15</td>
+               <td>6</td>
+               <td>17</td>
+               <td>18</td>
+               <td>19</td>
+               <td>20</td>
+               <td>21</td>
+            </tr>
+
+            
+        </tbody>   
+        
+    </table>
+        <h2>Temel Tablo Yapısı: Tablo 2</h2>
+        <table>
+        <tr>
+            <th>İsim</th>
+            <th>Soyisim</th>
+        </tr>
+        <tr>
+            <td>Ahmet</td>
+            <td>Kaya</td>
+        </tr>
+        <tr>
+            <td>Mehmet</td>
+            <td>Yılmaz</td>
+        </tr>
+        </table>
+        <table>
+            <h2>Tablo 3</h2>
+            <tr>
+              <th>Ürün Adı</th>
+              <th>Ürün Fiyatı</th>
+            </tr>
+            <tr>
+              <td>Elma</td>
+              <td>$1</td>
+            </tr>
+            <tr>
+              <td>Muz</td>
+              <td>$0.5</td>
+            </tr>
+          </table>
+          <table style="width:100%; border: 1px solid black;">
+            <tr>
+              <th style="border: 5px solid black; padding: 9px; text-align: left; background-color: aquamarine;">İsim</th>
+              <th style="border: 5px solid black; padding: 9px; text-align: left; background-color: aquamarine;">Soyisim</th>
+            </tr>
+            <tr>
+              <td style="border: 2px solid black; padding: 15px; text-align: left;">Ahmet</td>
+              <td style="border: 1px solid black; padding: 15px; text-align: left;">Kaya</td>
+            </tr>
+            <tr>
+              <td style="border: 2px solid black; padding: 15px; text-align: left;">Mehmet</td>
+              <td style="border: 1px solid black; padding: 15px; text-align: left;">Yılmaz</td>
+            </tr>
+          </table>
+
+          <table style="border:1">
+            <h2>İc İce Tablolar</h2>
+            <!-- İç tablo, kendi hücrelerini, sütunlarını ve satırlarını içerir ve ayrı bir birim olarak işlev görür. 
+             Çok fazla iç içe tablo kullanmak, kodun karmaşık ve yönetilmesi zor hale gelmesine neden olabilir -->
+            <tr>
+              <td>
+                <table style="border:1">
+                  <tr>
+                    <td>İç Tablo Hücresi 1</td>
+                    <td>İç Tablo Hücresi 2</td>
+                  </tr>
+                </table>
+              </td>
+              <td>Dış Tablo Hücresi</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Ürün Adı</th>
+              <th colspan="2">Fiyat Bilgileri</th>
+            </tr>
+            <tr>
+              <td>Elma</td>
+              <td>$1</td>
+              <td>%10 indirimle</td>
+            </tr>
+            <tr>
+              <td>Muz</td>
+              <td>$0.5</td>
+              <td>%5 indirimle</td>
+            </tr>
+          </table>
+          <tfoot></tfoot> <!-- Table altinda birsey yapilacaksa buradan yapilmalidir. -->
+</body>
+</html>

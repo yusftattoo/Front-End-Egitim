@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML Arttiributes</h1>
+
+
+    <h2> HTML Global Arttiributes</h2>
+
+    <h3> The <code>class</code>Attribute</h3>
+    <p class="foo bar"> CSS ve JavaScript ile etkilesimde bulunmasi icin siniflandirilmistir.</p>
+    
+    <!-- Tarayici icerisinde metin yazilabilir-duzenlenebilir bir alan olusur -->
+    <h3> The <code>contandeditable</code>Attribute</h3>
+    <p contenteditable="true">Bu duzenlenebilir bir paragraftir.</p>
+      
+    <!-- Kullaniciya ozel bir id tanimlaniyor gibi islem yapilmasi icin uuid kullanilabilir -->
+    <h3>  The <code>data-x</code>Attribute</h3>
+    <p data-name="Jhon"  uuid="Jhon"> Kullanici ogesi</p>
+    
+    <!-- Metinlerin sol veya sagsan baslamasini saglar. dir içerisinde left to right veya right to left kısaltmasi yazilir. -->
+    <h3>  The <code>dir-x</code>Attribute</h3>
+    <p dir="rtl">Bu metni sagdan sola dogru yazin!!!</p>
+    
+    <!-- Benzersiz kimlige sahiptir. ylanizca bir sefer kullanilabilir. class gibi degildir ( bir cok sefer kullanilablir) -->
+    <h3>  The <code>id-x</code>Attribute</h3>
+    <p id="uniq-id">Benzersiz bir kimlige sahip paragraf </p>
+    
+    <!-- WEB sitemizi    icerisinde kullandigimiz metnin sahip oldugu dile gore yazilmasini isteyebiliriz. -->
+    <h3>  The <code>lang</code>Attribute</h3>
+    
+    <p title="HTML kod dili TR secilmis fakat metin eklenen Attributes ile lang'ine uygun sonuc verir"
+    lang="en" style="text-transform: uppercase;"> This is paragraf</p>
+    
+    <p title="HTML kod dili TR'dir, WEB uzerinde kendi diline uygun yazim gerceklesmistir."
+    style="text-transform: uppercase;"> This is paragraf</p>
+    
+    <!-- Aciklama metni olusturur -->
+    <h3>  The <code>title</code>Attribute</h3>
+    <p title="Ihtiyaciniz olan egitimler icin Patika.dev'i ziyaret edin">Patike.dev</p>
+    
+    <!-- Otomatik çeviri yapmasini istemedigimiz metinleri cevirmez 
+     Exp: Ozel isim - Bir marka ismi - Farkli bir dilin bir kelimesi gibi. -->
+    <h3>  The <code>Translate</code>Attribute</h3>
+    <p translate="no">Don't translate this!</p>
+    
+    <h3>  The <code>img</code>Attribute</h3>
+    <img src="https://picsum.photos/seed/picsum/200/300     " alt="Lorem görseli">
+    
+    <!-- Video oynatmak icin eklenecek ozellikler / widht eklenebilir / loop niteligi ile tekrar ootomatik baslar/ control - autoplay " auto play icin mutlaka 'muted' gerekiyor - muted" -->
+    <h3>  The <code>video</code>Attribute</h3>
+    <video src=" video balantisi " controls autoplay muted></video>
+
+</body>
+</html

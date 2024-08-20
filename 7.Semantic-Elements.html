@@ -45,29 +45,46 @@
     <p>Anlamı olan ogelerdir.</p>
 
     <p> <code> Semantic El. Exm.; &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;form&gt;, &lt;table&gt;, &lt;footer&gt;...etc. </code></p>
+    <p> header Elementi
+        header elementi bir dokuman veya bir &lt;section&gt; için bir baslik oldugunu belirtir. Icinde barindirdigi icerigi kapsayici olmalidir. Bir dokumanda birden fazla kullanilabilir.</p>
     <header>
         <h2>Header</h2>
         <a href="#">Logo.</a>
+     <p>nav Elementi
+        &lt;nav&gt; elementi navigasyon baglantılari buyuk sayfalar için ortaya cikarilmistir. Fakat, sayfadaki tüm linkler bu element icinde olmak zorunda degildir.</p>   
         <nav>
             <h3>nav</h3>
-            
             <a href="#">Hakkimizda.</a>
             <a href="#">Makaleler.</a>
             <a href="#">Iletisim.</a>
             <a href="#">Lorem.</a>
         </nav>
     </header>
-    <main>
+    <main> <!-- body gorevi gorur, body olarak kullanilir-->
         <h2>main</h2>
+        <p> &lt;section&gt; Elementi
+            Section elementi bir dokuman icinde olan sadece bir kismi belirtir.</p>
         <section>
             <h3>section</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, eaque.</p>
             <article>
                 <h4>article</h4>
-                <figure>
+                <p>
+                    article Elementi
+                    &lt;article&gt; elementi bir makale elementidir. Bir makale web sayfasının geri kalanından bağımsız olarak dağıtılabilmelidir.
+                </p>
+                    <figure>
                     <img src="XBlock.jpg" height="300" width="200" alt="Dragon">
                     <figcaption>Dragon</figcaption>
-                </figure>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, error!</p>
+                    </figure>
+                    <p>figure Elementi
+                    Iceriginde resim, gosterim, diyagram, kod listeleri vs. gibi nesnelerin oldugunu belirtir. </p>
+                    <p>figcaption Elementi
+                        &lt;figcaption&gt; etiketi, &lt;figure&gt; elementinin belirttigi resme baslik koymaya yarar.</p>
+                    <p>aside Elementi
+                        &lt;aside&gt; elementi içerdiğinden farklı olarak daha başka bazı içerikleri tanımlar. İçeriği, üst içerik hakkında olmalıdır.</p>
+                    <p>footer Elementi
+                    &lt;footer&gt; elementi bir doküman ya da kısım için alt bilgilerini belirtir. Bir&lt;footer&gt; genelde dokümanın yazarını, telif haklarını, kullanım gizliği, iletisim vs. gibi bilgileri içerir ve bir dokümanda bir kereden fazla kullanılabilir.</p>
             </article>
         </section>
         <section>

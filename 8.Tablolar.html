@@ -20,7 +20,7 @@
 
 
     <h1>HTML Tables</h1>
-    <table>
+    <table border="1">
         <caption>Table</caption>
         <colgroup> <!-- Span secilen alanin kac satirlik yer sectigimiz belirler -->
             <col span="2" style="background-color: aquamarine;">
@@ -37,6 +37,7 @@
                 <th>Cumartesi</th>
                 <th>Pazar</th>
             </tr>
+            
         </thead> 
         <tbody> <!-- Table kendisine birsey yapilacaksa bodyden yapilmalidir. -->
             <tr> <!-- hucreleri birlestırirken birlestirecegimiz diger hucreyi sileriz <td>2</td> gibi. -->
@@ -101,10 +102,10 @@
               <td>$0.5</td>
             </tr>
           </table>
-          <table style="width:100%; border: 1px solid black;">
+          <table style="width:100%; border: 3px solid black;">
             <tr>
-              <th style="border: 5px solid black; padding: 9px; text-align: left; background-color: aquamarine;">İsim</th>
-              <th style="border: 5px solid black; padding: 9px; text-align: left; background-color: aquamarine;">Soyisim</th>
+              <th style="border: 2px solid black; padding: 9px; text-align: left; background-color: aquamarine;">İsim</th>
+              <th style="border: 1px solid black; padding: 9px; text-align: left; background-color: aquamarine;">Soyisim</th>
             </tr>
             <tr>
               <td style="border: 2px solid black; padding: 15px; text-align: left;">Ahmet</td>
@@ -112,7 +113,7 @@
             </tr>
             <tr>
               <td style="border: 2px solid black; padding: 15px; text-align: left;">Mehmet</td>
-              <td style="border: 1px solid black; padding: 15px; text-align: left;">Yılmaz</td>
+              <td style="border: 1px solid black; padding: 15px; text-align: right;">Yılmaz</td>
             </tr>
           </table>
 
@@ -147,6 +148,28 @@
               <td>$0.5</td>
               <td>%5 indirimle</td>
             </tr>
+
+            <table border="1">
+              <tr>
+                <td rowspan="2">Meyveler</td>
+                <td>Elma</td>
+              </tr>
+              <tr>
+                <td>Muz</td>
+              </tr>
+            </table>
+              <table border="1">
+              <tr>
+                <th colspan="2">Kahvaltı Menüsü</th>
+              </tr>
+              <tr>
+                <td>Yumurta</td>
+                <td>Bal</td>
+              </tr>
+              <tr>
+                <td colspan="2">Süt</td>
+              </tr>
+            </table>
           </table>
           <tfoot></tfoot> <!-- Table altinda birsey yapilacaksa buradan yapilmalidir. -->
 </body>

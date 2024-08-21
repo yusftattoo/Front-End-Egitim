@@ -3,15 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FORM</title>
 </head>
 <body>
+    <h1>Form tablosu olusturma</h1>
+    <pre>
+        - &lt;form&gt;: Formumuzun başlangıcını ve sonunu belirler.
+
+        - &lt;label&gt;: Giriş alanının açıklamasını belirler. for özelliği, etiketin hangi girdi elementine ait olduğunu belirtir.
+    </pre>  
+    <pre>      
+        - &lt;input&gt;: Kullanıcının bilgi girebileceği bir girdi alanı oluşturur.
+            
+              - type özelliği giriş türünü belirler. Örneğimizde "text" ve "email" kullanıldı, bu da ilk giriş alanının genel metin ve ikincisinin e-posta adresi girişi için olduğunu belirtir.
+            
+              - id özelliği, girdi alanının benzersiz tanımlayıcısını belirler. Bu, etiketle ilişkilendirme ve CSS/JavaScript ile elementi seçme için kullanılır.
+            
+              - name özelliği, girişin form verileri gönderildiğinde kullanılacak ismini belirtir.
+            
+        - type="submit" olan &lt;input&gt;: Kullanıcıya formu gönderme düğmesi sağlar.
+
+        - &lt;form&gt;web sayfasıyla etkileşimde bulunmasına ve bilgilerini sunucuya göndermesine olanak sağlar.
+    </pre>
     <form>
+        <strong>Exm.</strong><br>
+
+        <h4>1. Basit bir İletişim Formu:</h4>
         <label for="name">Adss:</label><br>
         <input type="text" id="name" name="name"><br>
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email"><br>
         <input type="submit" value="Gönder">
       </form>
+      <form>
+        <h4>2. Seçim Kutusu ve Onay Kutusu İçeren Bir Form:</h4>
+        <label for="name">Adınız:</label><br>
+        <input type="text" id="name" name="name"><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        
+        <label for="message">Mesajınız:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        
+        <input type="submit" value="Gönder">
+      </form>
+      <p> &lt;textarea&gt; etiketi, kullanıcının bir metin alanına birden çok satır metin girebilmesini sağlar.</p>
+
+      <h4>3. Radyo Düğmeleri İçeren Bir Form:</h4>
+      <form>
+        <label for="name">Adınız:</label><br>
+        <input type="text" id="name" name="name"><br>
+        
+        <p>Cinsiyet:</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Erkek</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Kadın</label><br>
+        
+        <input type="submit" value="Gönder">
+      </form>
+      <p>&lt;input type="radio"&gt; etiketi, kullanıcının sadece bir seçenek seçmesini sağlayan radyo düğmeleri oluşturur. </p>
+
+
 </body>
 </html>

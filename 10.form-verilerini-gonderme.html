@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Verileri Notlar</title>
 </head>
 <body>
     <ul>
-        <li><a href="İndex.html">Pages</a></li>
+        <li><a href="index.html">Pages</a></li>
     </ul>
     <h1> Form verileri   </h1>
-    <p>kullanıcıların belirli bir web sayfasıyla etkileşimde bulunmasına ve bilgilerini sunucuya göndermesine olanak sağlar. Bunun için genellikle bir HTML <form> etiketi kullanılır. Bu etiket, action ve method olmak üzere iki ana öznitelik alır.</p>
+    <p> Kullanıcıların belirli bir web sayfasıyla etkileşimde bulunmasına ve bilgilerini sunucuya göndermesine olanak sağlar. Bunun için genellikle bir HTML <form> etiketi kullanılır. Bu etiket, action ve method olmak üzere iki ana öznitelik alır.</p>
 
         <pre>
             1. action özniteliği:
@@ -41,41 +41,41 @@
 
         <h2>Simple Form</h2>
 
-        <form action="thankyou.html" method="get">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname"><br>
-        <input type="submit" value="Submit">
+        <form action="gecicialan.html" method="get"> <!-- action alani verileri gonderecegimiz alanın bilgisi olmalidir. mevvcut bilgi gecicidir-->
+                <label for="fname">First name:</label>         
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <input type="submit" value="Submit">
 
-                Form Elemanlarının Özellikleri
-            HTML'deki form elemanları, kullanıcıdan bilgi almak için kullanılır. Bu form elemanları farklı türde ve özelliklerde olabilir ve farklı amaçlar için kullanılabilir.
-            
-        <p> 1. &lt;input&gt;
+                    Form Elemanlarının Özellikleri
+                HTML'deki form elemanları, kullanıcıdan bilgi almak için kullanılır. Bu form elemanları farklı türde ve özelliklerde olabilir ve farklı amaçlar için kullanılabilir.
+                
+            <p> 1. &lt;input&gt;
 
-            <input> etiketi, bir HTML formunun en temel elemanıdır ve birçok farklı türde veriyi kabul edebilir.  &lt;input&gt; elemanının type özelliği, form elemanının türünü belirler. <br>
-            <strong> Exm.</strong>
-            
-            - type="text": Metin girişi için standart form elemanıdır. <br>
+                <input> etiketi, bir HTML formunun en temel elemanıdır ve birçok farklı türde veriyi kabul edebilir.  &lt;input&gt; elemanının type özelliği, form elemanının türünü belirler. <br>
+                <strong> Exm.</strong>
+                
+                - type="text": Metin girişi için standart form elemanıdır. <br>
 
-            - type="password": Girilen metni maskeleyerek kullanıcıdan bir parola girişi alır. <br>
+                - type="password": Girilen metni maskeleyerek kullanıcıdan bir parola girişi alır. <br>
 
-            - type="radio": Kullanıcının birden çok seçenek arasından tek bir seçeneği seçmesini sağlar. <br>
+                - type="radio": Kullanıcının birden çok seçenek arasından tek bir seçeneği seçmesini sağlar. <br>
 
-            - type="checkbox": Kullanıcının birden çok seçenek arasından bir veya daha fazla seçeneği seçmesini sağlar. <br>
+                - type="checkbox": Kullanıcının birden çok seçenek arasından bir veya daha fazla seçeneği seçmesini sağlar. <br>
 
-            - type="submit": Formu sunucuya göndermek için kullanılır. <br>
+                - type="submit": Formu sunucuya göndermek için kullanılır. <br>
 
-            - type="reset": Formda girilen tüm bilgileri sıfırlar. <br>
-            
-            <form>
+                - type="reset": Formda girilen tüm bilgileri sıfırlar. <br>
+                
+       
                 
                 Ad: <input type="text" name="name"><br>
                 Email: <input type="email" name="email"><br>
                 <input type="submit" value="Gönder">
-              </form>
-        </p>
-
+              
+            </p>
+        <form>    
         
         <p> 
             <h3> textarea</h3>
@@ -104,11 +104,6 @@
     
         <h1> IKINCI BOLUM NOTLARIM </h1>
          
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
     <ul>
         <li><a href="İndex.html">Pages</a></li>
@@ -121,7 +116,7 @@
             <legend>Kişisel bilgiler: </legend> <!--form element basligi ekler -->
             <div>
                 <label for="fullname">isim soyisim</label>  <!-- label inputu niteliyor, yazilacak bilgiler ve yazilabilir veri türünü secmemiz icin ikisi arasinda ki iliski onemli-->
-                <input type="text" id="fullname">  <!--burada eklenen id, labelda eklenen id de yazilacak form alanina focuslanma sagliyor. -->
+                <input type="text" id="fullname">  <!--burada eklenen id, label da eklenen id de yazilacak form alanina focuslanma sagliyor. -->
             </div>
             <div>
                 <label for="gender">Cinsiyet:</label> <!-- radio asagidaki secim alaninda birini secmemiz sagliyor, bunu icin name kismida ayni olmalidir-->
@@ -188,7 +183,7 @@
             </div>
             <div>
                 <label for="address">Adres:</label>
-                <textarea  id="address" rows="5" cols="50"></textarea> <!-- adres satirini olculendirebiliriz fakat diger alanlari olculendiremeyiz.
+                <textarea  id="address" rows="5" cols="50"></textarea> <!-- adres ve mesaj aynı satırdan oluşur bu satirlari olculendirebiliriz fakat diger alanlari olculendiremeyiz.
                  adres bilgileri belirli bir alan icerisinde yazilabilir bu neden ile kapatma etiketi olmali.-->
                 
             </div>
@@ -249,65 +244,75 @@
     <input type="number" value="28" disabled>
 
     <h3>The <code>placeholder</code> Attribute</h3> <!-- kullaniciya yazmasini istedigimi veriye ornek sunabiliriz-->
-    <input type="tel" placeholder="***  *** ** **">
+    <input type="tel" placeholder="***  *** ** **"> <br>
+>
 
-        <H1>BASIT TAM FORM GORUNUMU</H1>
-        <!DOCTYPE html>
-<html>
-<body>
 
-<h2>Kayıt Formu</h2>
+    <p>*********************************</p>
+    <!-- 
+    Form  Genele Tekrar
+    1.action:Girilen bilgilerin yönlendirmesini yapıyoruz. 
+    2.method:formdan verilerin hangi http metotluyla gidceğini kararlarştırıyorum.
+    GET/POST.
+    3.target:verilerin hangi sekmede acılagını belirtiyoruz.
 
-<form action="/submit_form.html" method="get">
-  <!-- Text Input -->
-  <label for="fname">Ad:</label><br>
-  <input type="text" id="fname" name="fname" required><br>
+    input:en cok kullandıgımız etikettir.
+    type:etiketin hangi kullanılacağını belirrtiğimiz kısımdır.
+    text,number,button,checkbox,color:
 
-  <label for="lname">Soyad:</label><br>
-  <input type="text" id="lname" name="lname" required><br>
+    text:düz yazı değerini gitdipimiz yerdir.
 
-  <!-- Email Input -->
-  <label for="email">E-posta:</label><br>
-  <input type="email" id="email" name="email" required><br>
+    name:her form elemanı bir öz. tanımlamak zorundayız.
+    <input type="text" name="ad"> 
 
-  <!-- Password Input -->
-  <label for="pwd">Şifre:</label><br>
-  <input type="password" id="pwd" name="pwd" minlength="8" required><br>
+    password:şifre.
 
-  <!-- Date Input -->
-  <label for="dob">Doğum tarihi:</label><br>
-  <input type="date" id="dob" name="dob" required><br>
+    reset:form elemanlarının verilerinin sıfırlanmasına yarar.
 
-  <!-- Radio Button Input -->
-  <p>Cinsiyet:</p>
-  <input type="radio" id="male" name="gender" value="male" required>
-  <label for="male">Erkek</label><br>
-  <input type="radio" id="female" name="gender" value="female" required>
-  <label for="female">Kadın</label><br>
+    radio:kullanıcaya birden fazla seçenek sunuldugu zamanda verilir.
+    TEK VERİ GİRDİMİZDE.
 
-  <!-- Checkbox Input -->
-  <input type="checkbox" id="terms" name="terms" required>
-  <label for="terms">Kullanım şartlarını kabul ediyorum.</label><br>
+    checkbox:kullanımıza birden fazla seçenek SUNDUGUMUZDA ÇOKLU SEÇİM
+    YAPMAMIZI SAĞLAR.
+   -->
+<!-- 
+   <h2>FORM</h2>
+   <form action="patika.com" method="post"> <br>
+    <input readonly placeholder="LÜTFEN EKSİKSİZ."><br>
+    <input type="text" name="ad" placeholder="ADINIZI GİRİNİZ"
+    autofocus required autocomplete="name"
+    ><br>
+    <input type="password" placeholder="şifre" required ><br>
+    <input type="number" placeholder="numara giriniz" required
+    min="10" max="100" step="5"
+    ><br>
+    <p>
+        Hobilerimi
+    </p>
+    Kitap: <input type="checkbox" name="hobi1"><br>
+    Kahve: <input type="checkbox" name="hobi2"><br>
 
-  <!-- Textarea Input -->
-  <label for="message">Mesaj:</label><br>
-  <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+    <p>Cinsiyet</p>
+    Erkek <input type="radio" name="cinsiyet" ><br>
+    Kadın <input type="radio" name="cinsiyet" ><br>
 
-  <!-- Select Input -->
-  <label for="country">Ülke:</label><br>
-  <select id="country" name="country">
-    <option value="turkey">Türkiye</option>
-    <option value="usa">ABD</option>
-    <option value="germany">Almanya</option>
-  </select><br>
+    <input type="color" name="renk"><br>
+    <input type="datetime-local" name="tarih" min="1980-01-01"><br>
 
-  <!-- Submit Button -->
-  <input type="submit" value="Gönder">
+    <input type="email" name="email"><br>
+    <input type="file"  name="dosya"><br>
+    <input type="image" name="resim"><br>
 
-</form>
+    
+    <input type="range" name="aralik"><br>
 
-</body>
-</html>
-</form> 
+   <p>Telefon No:</p> <input type="tel" name="telefonNo" 
+    pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+    maxlength="10"
+    >
+
+    <input type="submit" value="Gönder">
+    <input type="reset" name="reset">
+</form>  -->
 </body>
 </html>

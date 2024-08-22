@@ -4,42 +4,44 @@
 
 <h2>Kayıt Formu</h2>
 
-<form action="/submit_form.html" method="get">
-  <!-- Text Input -->
+<form action="index.html" method="get"> <!-- gercek bir sunucu uzerinden islem yapilirsa url alanina dogru adres yazilir.-->
+  <!-- Text Input /   Kullanıcının metin girebilmesi için kullanılır. Ad ve soyad için kullanıldı. -->
   <label for="fname">Ad:</label><br>
   <input type="text" id="fname" name="fname" required><br>
 
   <label for="lname">Soyad:</label><br>
   <input type="text" id="lname" name="lname" required><br>
 
-  <!-- Email Input -->
+  <!-- Email Input / Kullanıcının bir e-posta adresi girebilmesi için kullanılır. HTML otomatik olarak e-posta biçimini doğrular. -->
   <label for="email">E-posta:</label><br>
   <input type="email" id="email" name="email" required><br>
 
-  <!-- Password Input -->
+  <!-- Password Input / Kullanıcının bir parola girebilmesi için kullanılır. Girişi gizler.-->
   <label for="pwd">Şifre:</label><br>
   <input type="password" id="pwd" name="pwd" minlength="8" required><br>
 
-  <!-- Date Input -->
+  <!-- Date Input  /Kullanıcının bir tarih girebilmesi için kullanılır.  -->
   <label for="dob">Doğum tarihi:</label><br>
   <input type="date" id="dob" name="dob" required><br>
 
-  <!-- Radio Button Input -->
+  <!-- Radio Button Input  / Kullanıcının birden fazla seçenek arasından birini, button olarak seçmesine olanak sağlar. Burada cinsiyet seçimi için kullanıldı. -->
   <p>Cinsiyet:</p>
   <input type="radio" id="male" name="gender" value="male" required>
   <label for="male">Erkek</label><br>
   <input type="radio" id="female" name="gender" value="female" required>
   <label for="female">Kadın</label><br>
 
-  <!-- Checkbox Input -->
+  <!-- Checkbox Input  / Kullanıcının bir seçeneği onaylamasını sağlar. Kullanım şartları onayı için kullanıldı.
+
+ -->
   <input type="checkbox" id="terms" name="terms" required>
   <label for="terms">Kullanım şartlarını kabul ediyorum.</label><br>
 
-  <!-- Textarea Input -->
+  <!-- Textarea Input  / Kullanıcının çok satırlı metin girebilmesi için kullanılır. Mesaj bölümünde kullanıldı. -->
   <label for="message">Mesaj:</label><br>
   <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
 
-  <!-- Select Input -->
+  <!-- Select Input  / Kullanıcının bir açılır menüden bir seçenek seçmesini sağlar. Ülke seçimi için kullanıldı.  -->
   <label for="country">Ülke:</label><br>
   <select id="country" name="country">
     <option value="turkey">Türkiye</option>
@@ -47,9 +49,9 @@
     <option value="germany">Almanya</option>
   </select><br>
 
-  <!-- Submit Button -->
+  <!-- Submit Button / Formun gönderilmesini tetikler.-->
   <input type="submit" value="Gönder">
-
+  <button type="reset">Temizle</button>
 </form>
 
 </body>

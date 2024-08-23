@@ -1,0 +1,78 @@
+ 
+ 
+ .container{ /* büyük kapsayıcı alan*/
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+
+}
+ /**/
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position:absolute ; 
+    left: 50px;
+}
+ /* 1.position:absolute: = kullanılırsa Alttaki kapsayıcı alan üste çıkartılırsa, 
+    üstüne bindiği kapsayıcı alanın yerini doldurur. fakat elatic kullanırlırsa,
+    mevcut alanın yerine başka bir kapsayıcı alan gelmez. Yani birbirlerinin mevcut alanlarını işgal edemezler. 
+    
+    not. bir üst satırı otomatik kaplaması  ( işgaletmesi) ; tanımlanmış basşka bir alan varsa onun üstüne binemez.
+    burada alt alta 3 box var, ortadaki 2. box sağa kaydığında 3. box 2. box ın alannı kapsar. 
+    bu durumu şuan ki kod yazılımında bozan şey, 3 box için de position lar da absolute olması. bunu değiştirir 
+    rilative yapılırsa üst üste binemez. 
+    */
+/* üstüste binen kapsayıcı alanların hangisini ön plana çıkartmak istediğimizi z index i ile belirleyenilirz
+z-index yüksek olan diğerinin üzerine de olur.
+*/
+ /*position: relative; = göreceli demektir. konumunu manuel ayarlayabiliriz */
+ /* bottom kullanılırsa top 
+    right kullanılırsa left kullanılmaz
+    iki zıt komutu aynı anda kullandırmaz */
+/* bottom: 0; verilirse cotainer içerisinde position relative yoksa anatarayıcı ekranı
+üzerinden bottom 0 yapar. fakat container içinde postion tanımlanırsa container (mevcut)
+kapsadığıda alan 500px - 500px alanı içinde bottom 0 yapar. */
+.box2{
+    width: 100px;
+    top: 100px;
+    height: 50px;  position:absolute ;
+    background-color: rgb(68, 82, 85);
+    text-decoration: underline;
+}
+
+/* px yerin %lik değer verebiliriz fakat container alanının %si üzerinden hesaplanmalıdır.*/
+.box3{
+    width: 50px;
+    height: 100px;
+    background-color: lime;
+    position:absolute ;
+    
+}
+ /**/
+.box4{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    
+    position: absolute;
+}
+
+  /* .fixed{
+    position: fixed;
+    width: 300px;
+    border: 3px solid orange;
+    right: 0;
+    bottom: 0;
+    background-color: green;
+  } */
+  /*  bir sitede bulunduğumuz sayfayı değiştirsek bile en altta değişmeyen sayfa yapısı  */
+
+  .sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: bisque;
+    border: 2px soldi red;
+  }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .overflow {
+            height: 100px;
+            background-color: lightcyan;
+        }
+        .overflow.visible{
+            overflow: visible;
+        }
+        .overflow.hidden{
+            overflow: hidden;
+        }
+        .overflow.scroll{
+            overflow: scroll;
+        }
+        .overflow.auto{
+            overflow: scroll;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>CSS Laout- Flowover 
+        <h2>the overflow property</h2>
+        <h3>overflow: visible;</h3>
+        <div class="overflow visible">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quo!</p>
+      </div>
+        <h3>overflow: hidden;</h3>
+        <div class="overflow hidden">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quo!</p>
+        </div>
+        <h3>overflow: scroll;</h3> <!-- scroll her zaman olsun-->
+        <div class="overflow scroll">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quo!</p>
+        </div>
+        <h3>overflow: auto;</h3> <!--- içerik taşmıyorsa scroll olmasın-->
+        <div class="overflow auto">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quo!</p>
+        </div>
+    </h1>
+
+</body>
+</html>

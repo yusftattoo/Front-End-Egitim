@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Outline</title>
+    <style>
+        p{
+            outline-width: 3px; /* değer arttıkçe kulanılan özellik digerlerini üzerine biniyor */
+            outline-color: rgb(247, 116, 65);
+            outline-offset: 2px;
+
+        }
+        .c1{
+            outline-style: dotted;
+        }
+        .c2{
+            outline-style: dashed;
+        }
+        .c3{
+            outline-style: solid;
+        }
+        .c4{
+            outline-style: double;
+        } /* outline-width degeri az olursa renklerden dolayı çift kenar bazen gorunmuyor */
+
+        .c5{
+            outline: 5px dotted red ;
+            outline-offset: 5px;
+            border: 2px solid rebeccapurple;
+        }
+        .c6{
+            outline: 5px dotted rgb(101, 199, 191) ;
+            outline-offset: -10px;
+            border: 2px solid red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>CSS Out Line </h1> <!-- bı stiller içiçe kullanılabilir -->
+        <h2>CSS Outline Style</h2>
+            <h3  >dotted</h3>
+                <p class="c1">  Noktalı bir dış kenar tanimlar <br>
+                    Lorem ipsum dolor sit amet consectetur.</p>
+            <h3 >dashed</h3> 
+                <p class="c2">kesiklı bir dis kenar tanimlar <br>
+                    Lorem ipsum dolor sit amet consectetur.</p>
+            <h3>solid</h3>
+                <p class="c3">Düz bir dış kenarlık tanimlar <br>
+                    Lorem ipsum dolor sit amet consectetur.</p>
+            <h3 class="c4"  >double</h3>
+                <p class="c4"> Çift dis kenar tanimlar   <br>
+                    Lorem ipsum dolor sit amet consectetur.</p>
+            <h3 class="c5"  >outline- shorthand</h3>
+                <p class="c6" > Lorem ipsum dolor sit.   <br>
+                    Lorem ipsum dolor sit amet consectetur.</p>
+
+    </div>
+
+
+
+
+
+    <div>
+        <h1>CSS OUTLINE Properties</h1>
+           <li> ogenin sinir disine cizilmis bir cizgidir.</li>
+            <li>Butonun uzerine geldiginde olusan cizgi.</li>
+           <li><strong> Border </strong>ile farklı: ogeye eklendiginde fiziksel olarak,
+             eklenen boyut kadar yukseklik ve uzunlugunu degistirir. </li>
+           <li> kendi yuksekligini ve uzunlugunu elementin yuksekligi ve uzunluguna ekler.</li>
+            <li>Dis kenar kalinligi, stili ve rengini tek bir ifadede birlestirir.</li>
+        <br>
+            
+           <li> <strong>outline-width:</strong> dis kenar kalanligi</li>
+            <li><strong>outline-style</strong> dis kenar stili belirler.</li>
+            <li><strong>outline-color</strong> dis kenar rengi belirler.</li>
+    
+        <h1>CSS Outline Style</h1>
+            <li><strong>dotted</strong> Noktali bir dış kenar tanimlar</li>
+            <li><strong>dashed</strong>kesikli bir dis kenar tanimlar</li>
+            
+            
+            <li><strong>ridge</strong> 3D cikintiki bir dis kenarlik tanimlar,
+                 Etki,kenarlik rengi değerine baglidir.</li>
+            <li><strong>none</strong> Sinir tanimaz</li>
+
+    </div>
+</body>
+</html>

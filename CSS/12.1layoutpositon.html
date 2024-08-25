@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS layout:The position</title>
+    <style>
+
+        .boxx { /* ek ornek*/
+            position: static;
+            width: 150px;
+            height: 100px;
+            background-color: #007BFF;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 100px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .position {
+            border: 2px solid peru;
+        }
+        .position.relative {
+            position: relative;
+        }
+        .position.absolute {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+        .position.sticky{
+            position: sticky ;
+            top: 0;
+            left: 0;
+            border-color: blue;
+        }
+        .position.fixed{
+            position: fixed ;
+            top: 0;
+            right: 0;
+            width: 200px;
+            border-color: rgb(160, 15, 15);
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>CSS layout:The position</h1>
+        <p>HTML elemanlarının sayfa üzerinde nasıl konumlandırılacağını ve yerleştirileceğini belirlemek için kullanılır. 
+            Pozisyonlama, web sayfalarının düzenini ve tasarımını kontrol etmek için önemli bir araçtır. 
+            CSS'de beş farklı pozisyonlama değeri vardır: static, relative, absolute, fixed ve sticky.</p>
+    <h2>position:static</h2>
+            <p>varsayılan pozisyonlama değeridir ve elemanları normal akışta bırakır. 
+                Bu demektir ki, elemanlar belirlenen sıraya ve belirtilen yerlere göre düzenlenir.
+                top, right, bottom, left, z-index gibi pozisyonlama özellikleri,
+                static pozisyonlama için etkisizdir.</p>
+        <div class="position"> <!-- position static olan bir element absolute elementin 
+            referans çizgisi olamıyor,  absolute element position static i üzerine 
+            taryıcı sınırına kadar çıkıyor.
+            fakat posisiton relative olan bir element absolute elementin referans 
+            çizgisi olabiliyor ve referansını geçemiyor. -->
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+   
+    <h2>position:relative</h2>
+     <!-- relative pozisyonlama, elemanları normal
+       akışa göre yerleştirirken, top, right, bottom, left gibi
+        pozisyonlama özellikleri ile elemanın kendi yerini ayarlamamıza 
+        olanak tanır. Eğer pozisyon özellikleri belirtilmezse, 
+      eleman yine normal akışta kalır.-->
+        <div class=" position relative">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Molestias fugiat fuga reprehenderit ut provident laudantium commodi voluptatem placeat! Optio, nobis.</p>
+        
+            
+        <div class="position absolute"><!-- absolute elemene yer kaplamaz-->
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Dolores voluptates, placeat amet aliquid explicabo repellat exercitationem blanditiis. Obcaecati, beatae enim?</p>
+        </div>
+        </div>
+
+    <h2>position absolute</h2>
+        <div class="position absolute">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        </div>
+
+        <div class="boxx">Box 1</div> <!-- ek ornek-->
+        <div class="boxx">Box 2</div>
+    <br>
+    <br>    
+    <br>
+    <br>
+    
+        <h2>position: sticky</h2>
+        <div class=" position sticky"><!-- ekranı aşağı kaydırdığımızda 1. page bitse dahi bu alan ekranın en üstünde asılı kalıyor. tekrar aşağı indirildiğinde iner.-->
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias fugiat fuga reprehenderit ut provident laudantium commodi voluptatem placeat! Optio, nobis.</p>
+        </div>
+        <h2>position: fixed</h2>
+        <div class=" position fixed"><!--  Sabit menü veya bar
+            ekranı aşağı- yukları kaydırdığımızda konumlandırılan alanda   ekranın üstünde asılı kalıyor.  .-->
+            <p> . Lorem ipsum dolor, s . e em plac .</p>
+        </div>
+
+
+
+
+
+
+
+        <div style="height: 200vh;"></div>
+</body>
+</html>

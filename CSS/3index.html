@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .c2 {
+            width: 200px;
+            height: 300px;
+            background-image: url('../CSS/xxz.jpg');
+            background-size: cover;
+            background-size: 100% 100%; /* burada verilen %100 ler 
+            yukarıda belirlenen width ve height değerinin %lik kısmını kullanır.*/
+    }
+    .c3{
+            width: 400px;
+            height: 500px;
+            background-image: url('../CSS/xxz.jpg');
+            
+            background-size: 100% 100%; /* burada verilen %100 ler 
+            yukarıda belirlenen width ve height değerinin %lik kısmını kullanır.*/
+            background-repeat: no-repeat;  /* tekrarlanması istemiyorsak no-repeat*/
+            background-position: right center;
+            border: 1px solid rgb(218, 219, 219);
+            background-attachment: scroll;
+    }       
+    .c4{ /*arkad plan ayarlarında kısaltma işlemi*/
+            width: 400px;
+            height: 300px;
+            background: rgb(221, 221, 221) url('../CSS/xxz.jpg') 
+            no-repeat center center ;
+            background-size: 250px 250px; /* burada verilen %100 ler 
+            yukarıda belirlenen width ve height değerinin %lik kısmını kullanır.*/
+               /* tekrarlanması istemiyorsak no-repeat*/
+            border: 1px solid gray;
+            
+    }       
+    .header {
+        background-color: aqua;
+    }
+    body { padding-bottom: 500px;
+            background-color: bisque;
+    } /* alt satır bosluğu oluturur*/ 
+    </style>
+</head>
+<body>
+    <div >
+        <h1 class="header">CSS Background properties</h1>
+            <p>background-attachment: Sayfa kayıdırıldığında arka plan resminin nasıl davranacağını belirler</p>
+            <p>Backround-repeat: Arka plan resminin nasıl tekrarlanacağını belirler.</p>
+            <p>Backround-image: Arka plan için bir resim dosyası belirtir. </p>
+        
+            <p>Background-position: Arka plan resminin konumunu ayarlar</p>
+    </div>
+        <h2 class="header">Background-image</h2>
+        <div class="c2"></div>
+        
+        <h2 class="header">Background-image</h2>
+        <div class="c3"></div>
+   
+        <h2 class="header">Background-image</h2>
+        <div class="c4"></div>
+   
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout: the Z-index Property</title>
+
+<style>
+.box   {
+    width: 100px;
+    height: 100px;
+}
+.c1 {
+    background-color: aquamarine;
+}
+.c2 {
+    z-index: 1;
+    margin: -50px 0 0 50px;
+    background-color: rgb(106, 161, 245);
+}
+.c3 {
+    z-index: 2;
+    margin: -50px 0 0 100px;
+    background-color: rgb(255, 127, 180);
+}
+.c4 {
+    z-index: 3;
+    margin: -50px 0 0 150px;
+    background-color: rgb(255, 242, 127);
+}
+
+</style>
+</head>
+<body>
+    <h1>CSS Layout: the Z-index Property</h1>
+    <!-- z-index uygulanmıyor ise style üzerinden position relative yapmamız gerekir.-->
+
+<div class="box c1">1</div>
+<div class="box c3">3</div>
+<div class="box c2">2</div>
+<div class="box c4">4</div>
+<div class="box" style="background-color: rgb(187, 0, 0);
+ z-index: -2; position: absolute; left: 20px;  top: 50px;">8</div>
+<!-- tanımlanana z-index in numaralandırmasına göre ön plana çıkacak kutu değerleri belirlendi
+ son tanımlanan 10. box ile:
+ ---z index tanımlanmaz ise 10. box i zindex 0 gibi hareket eder en ön plana çıkar
+ ---  -->
+
+
+</body>
+</html>

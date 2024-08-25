@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>CSS Text</h2>
+    <h3>Text Alignment </h3>
+        <p>bir metnin yatay hizlanmasini ayarlamak icin kullanilir</p>
+        <p>
+       <strong> text-align:</strong> rigth kelimeyi sadece sağa yaslar.
+        veritgal-align    </p>
+        <strong>veritcal-align</strong>
+        <p>seçilen bir metni yarım satır üstte konumlandırır. mark içerisinde yazılan alanı style ile kullanabiliriz.
+            Lorem, ipsum <mark>Lorem.</mark> Lorem, ipsum dolor.
+        </p>
+    <h3>Text Direction</h3>
+        <p> metne bir dekorasyon çizgisi eklemek için kullanilir</p>
+        <p>  direction: rlt (right to left) ile sağfan sola yazar     </p>
+    <h3>Text Decoraiton</h3>
+        <p>yazı üzerinde alt çizgi ustçizgi vs gibi dekorasyonlar oluşturulabilir</p>
+    <h3>Text Trasnformation</h3>
+        <p>kelimeleri harfleri şekillendirilir, hepsi büyük harf küçük harf gibi <br>
+        clas içerisinde lang="en" eklenir ise o paragrafı ingilizceye göre büyütür.</p>
+    <h3>Text spacing</h3>
+        <p><strong>text-indent:</strong> Satırın başlangıcı için verilen boşluk</p>
+        <p><strong>later-spacing:</strong>harf( karakter) arasındaki boslukları ayarlıyor</p>
+        <p><strong>line-height</strong> satır yüksekliği ayarlar</p>
+        <p><strong>white-spaca</strong> bir metnin satırında boşlukların nasıl davranacağını belirler.
+            sayfa sonunda 2. metinmi olsun yoksa metin uzasın mı!
+            normal / pre / nowrap : tek satırda yazar/p>
+    <h3>Text Shadow </h3>
+        <p><strong>text-shadow:</strong> gölgelendirme yapar, ve gölgeyi renklendirebiliriz üstüste binmiş yazı gibi olur. 
+    1px 1px gölge yakınlığı ayalarnabilir.</p>
+        <p>rgb renk ayaralında 3 sıralı renkten sonra .25 gibi bir değer verildiğinde gölge renkgin opaklığı belirlenir.</p>
+
+        <div>
+        <ul>
+           <pre>
+            Metin ve Yazı Tipi Stilleri
+I. Metin Renkleri ve Yazı Tipi Seçimi:
+
+   A. Metin Renkleri:
+
+   Metin rengini belirlemek için color özelliğini kullanırız. Bu özelliği kullanarak metinleri istediğimiz renkte gösterebiliriz.
+
+ p {
+     color: red;
+    /* Metin rengini kırmızı olarak ayarlama */
+}
+   B. Yazı Tipi Seçimi:
+
+   Yazı tipini belirlemek için font-family özelliğini kullanırız. Bu özelliği kullanarak farklı yazı tiplerini web sayfamızda kullanabiliriz.
+
+ body {
+     font-family: "Arial", sans-serif;
+    /* Arial yazı tipini kullanma */
+}
+Başka bir örnek:
+
+/* Metin rengini kırmızı olarak ayarlama */
+h1 {
+     color: red;
+}
+/* Başlık metinleri için farklı yazı tipleri kullanma */
+h1 {
+     font-family: "Helvetica", sans-serif;
+}
+h2 {
+     font-family: "Arial", sans-serif;
+}
+II. Yazı Boyutu ve Satır Yüksekliği:
+
+   A. Yazı Boyutu:
+
+   Yazı boyutunu belirlemek için font-size özelliğini kullanırız. Yazı boyutunu piksel, em veya yüzde cinsinden belirleyebiliriz.
+
+ h1 {
+     font-size: 36px;
+    /* Başlık metni için 36 piksel boyut */
+}
+   B. Satır Yüksekliği (Line Height):
+
+   line-height özelliğiyle metinlerin satır yüksekliğini belirleyebiliriz. Bu, metinlerin düzgün bir şekilde yerleştirilmesini sağlar.
+
+ p {
+     line-height: 1.6;
+    /* Satır yüksekliğini 1.6 em olarak ayarlama */
+}
+Başka bir örnek:
+
+/* Metin boyutunu belirleme */
+p {
+     font-size: 16px;
+    /* 16 piksel boyutunda metin */
+}
+/* Satır yüksekliğini ayarlama */
+p {
+     line-height: 1.6;
+    /* Satır yüksekliğini 1.6 em olarak ayarlama */
+}
+III. Metin Stilleri:
+
+   A. Kalın ve İtalik Yazılar:
+
+   Kalın yazı için font-weight, italik yazı için font-style özelliklerini kullanırız.
+
+ strong {
+     font-weight: bold;
+    /* Metni kalın yapma */
+}
+ em {
+     font-style: italic;
+    /* Metni italik yapma */
+}
+   B. Metin Altı Çizgisi ve Üstü Çizili Yazılar:
+
+   Metin altını çizmek için text-decoration özelliğini kullanırız.
+
+ a {
+     text-decoration: underline;
+    /* Linklerin altını çizme */
+}
+ del {
+     text-decoration: line-through;
+    /* Metni üstünden çizme */
+}
+Başka bir örnek:
+
+/* Metni kalın yapma */
+strong {
+     font-weight: bold;
+}
+/* Metni italik yapma */
+em {
+     font-style: italic;
+}
+/* Metni altını çizme */
+.underline-text {
+     text-decoration: underline;
+}
+/* Metni üstünden çizme */
+.strike-through-text {
+     text-decoration: line-through;
+}
+IV. Metin Yönü ve Harf Dönüşümü:
+
+   A. Metin Yönü:
+
+   direction özelliğiyle metinlerin yazım yönünü belirleyebiliriz.
+
+ .rtl {
+     direction: rtl;
+    /* Metinleri sağdan sola yazma (sağdan sola diller için) */
+}
+ .ltr {
+     direction: ltr;
+    /* Metinleri soldan sağa yazma (soldan sağa diller için) */
+}
+   B. Metin Dönüşümü:
+
+   text-transform özelliğiyle metinleri büyük harf, küçük harf veya baş harfleri büyük yapabiliriz.
+
+ .uppercase {
+     text-transform: uppercase;
+    /* Metinleri büyük harf yapma */
+}
+ .lowercase {
+     text-transform: lowercase;
+    /* Metinleri küçük harf yapma */
+}
+ .capitalize {
+     text-transform: capitalize;
+    /* Metinlerin baş harflerini büyük yapma */
+}
+Başka bir örnek:
+
+/* Metinleri sağdan sola yazma (sağdan sola diller için) */
+.rtl {
+     direction: rtl;
+}
+/* Metinleri soldan sağa yazma (soldan sağa diller için) */
+.ltr {
+     direction: ltr;
+}
+/* Metinleri büyük harf yapma */
+.uppercase {
+     text-transform: uppercase;
+}
+/* Metinleri küçük harf yapma */
+.lowercase {
+     text-transform: lowercase;
+}
+/* Metinlerin baş harflerini büyük yapma */
+.capitalize {
+     text-transform: capitalize;
+}
+V. Metin Gölgesi ve Kenarlık:
+
+   A. Metin Gölgesi:
+
+   Metinlere gölge eklemek için text-shadow özelliğini kullanabiliriz.
+
+ h1 {
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* 2px sağa ve 2px aşağı gölge ekleme */
+}
+   B. Metin Kenarlık:
+
+   Metinlere kenarlık eklemek için text-stroke özelliğini kullanabiliriz.
+
+ h2 {
+     -webkit-text-stroke: 2px black;
+    /* 2 piksel kalınlığında siyah kenarlık */
+}
+Başka bir örnek:
+
+/* Metinlere gölge eklemek */
+h1 {
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Metinlere kenarlık eklemek */
+h2 {
+     -webkit-text-stroke: 2px black;
+}
+VI. Metin Gölgelendirme ve Arka Plan Görüntüsü:
+
+   A. Metin Gölgelendirme:
+
+   Metinlere gölgelendirme efekti eklemek için background-clip ve color özelliklerini kullanabiliriz.
+
+ h3 {
+     background-clip: text;
+    /* Metin rengini arka plan olarak kullanma */
+     color: transparent;
+    /* Metni saydam hale getirme */
+     background-image: url("background-image.png");
+    /* Arka plan resmi */
+}
+  Başka bir örnek:
+
+/* Metinlere gölgelendirme efekti eklemek */
+h3 {
+     background-clip: text;
+     color: transparent;
+     background-image: url("background-image.png");
+}
+           </pre>
+        </ul>
+        </div>
+</body>
+
+
+</html>

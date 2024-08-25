@@ -1,0 +1,171 @@
+Renkler ve Arka Planlar
+Renklerin Temel Kavramları:
+
+RGB, HEX ve HSL Renk Modelleri:
+
+   CSS'de renkleri belirlemenin farklı yöntemleri vardır. Bunlardan en yaygın olanları RGB, HEX ve HSL renk modelleridir.
+
+   - RGB (Red, Green, Blue): RGB modeli, kırmızı, yeşil ve mavi bileşenleriyle bir renki temsil eder. Değerler 0 ile 255 arasında olabilir. Örneğin, rgb(255, 0, 0) kırmızıyı temsil eder.
+
+   - HEX (Hexadecimal): HEX değerleri altı basamaklı bir kombinasyon olarak ifade edilir ve # sembolü ile başlar. Örneğin, #FF0000 kırmızıyı temsil eder.
+
+CSS Renk İsimleri:
+
+   CSS'de belirli renkleri tanımlamak için önceden belirlenmiş renk adları bulunur. Örneğin, red, blue, green gibi. Bu renkleri doğrudan kullanabilir ve belirli özelliklere (metin rengi, arka plan rengi vb.) uygulayabiliriz.
+
+ body {
+     background-color: coral;
+    /* Mercan renginde arka plan */
+     color: darkslateblue;
+    /* Koyu leylak renkli metin */
+}
+ h1 {
+     background-color: mistyrose;
+    /* Soluk gül kurusu renkli arka plan */
+     color: darkblue;
+    /* Koyu mavi metin rengi */
+}
+HEX ve RGB Renk Değerleri:
+
+HEX Değerleri ile Renk Belirleme:
+
+   HEX değerleri altı basamaklı sayılarla temsil edilir. Her iki basamak bir renk bileşenini (kırmızı, yeşil, mavi) ifade eder. HEX değerini kullanarak renk belirlemek için örneğin şu şekilde yapabiliriz:
+
+ body {
+     background-color: #336699;
+    /* Örnek bir mavi tonu */
+}
+  Başka bir örnek:
+
+ p {
+     color: #FF5733;
+    /* Parlak turuncu metin rengi */
+}
+ .cta-button {
+     background-color: #00C851;
+    /* Canlı yeşil renkte çağrı-to-action butonu */
+     color: #FFFFFF;
+    /* Beyaz metin rengi */
+}
+  RGB Değerleri ile Renk Belirleme:
+
+   RGB modelini kullanarak renk belirlemek için rgb() fonksiyonunu kullanırız. Kırmızı, yeşil ve mavi bileşenlerini sırayla belirleriz.
+
+ h1 {
+     color: rgb(255, 0, 0);
+    /* Kırmızı */
+}
+  Başka bir örnek:
+
+ a {
+     color: rgb(148, 0, 211);
+    /* Mor metin rengi */
+}
+ .box {
+     background-color: rgb(120, 40, 60);
+    /* Koyu kırmızımsı kahverengi arka plan */
+}
+Saydam Renkler için RGBA:
+
+   RGBA, RGB modelinin bir uzantısıdır ve renge opaklık (transparency) değeri ekler. Opaklık değeri 0 ile 1 arasında olabilir. 0, tamamen saydam (görünmez), 1 tamamen opak (görünür) anlamına gelir.
+
+ .translucent-box {
+     background-color: rgba(0, 0, 255, 0.5);
+    /* Yarı saydam mavi */
+}
+Başka bir örnek:
+
+ .transparent-box {
+     background-color: rgba(255, 0, 0, 0.7);
+    /* Yarı saydam kırmızı arka plan */
+}
+ .overlay-text {
+     background-color: rgba(0, 0, 0, 0.5);
+    /* Yarı saydam siyah arka plan */
+     color: #FFFFFF;
+    /* Beyaz metin rengi */
+}
+Renkleri Kombine Etme:
+
+Opaklık ve Geçirgenlik ile Renk Birleştirme:
+
+   Renkleri birleştirirken, aralarındaki geçirgenlik ve opaklık değerlerini kullanabiliriz. Bu, özellikle arka plan rengini mevcut içeriğin üzerine geçirmek istediğimiz durumlarda kullanışlı olabilir.
+
+ .overlay {
+     background-color: rgba(255, 0, 0, 0.7);
+    /* Yarı saydam kırmızı */
+}
+Lineer Gradyanlar (Linear Gradients):
+
+   Gradyanlar, iki veya daha fazla rengi belirli bir yön boyunca akıcı bir şekilde geçiş yapacak şekilde birleştirmemize olanak tanır. İşte basit bir örnek:
+
+ .gradient-bg {
+     background: linear-gradient(to right, #FF0000, #00FF00);
+    /* Kırmızıdan yeşile geçiş */
+}
+Başka bir örnek:
+
+ .linear-bg {
+     background: linear-gradient(to right, #FF0000, #0000FF);
+    /* Kırmızıdan maviye doğru yatay gradyan */
+}
+ .header {
+     background: linear-gradient(to top right, #FFC300, #581845);
+    /* Sarıdan koyu mora çapraz gradyan */
+}
+Radial Gradyanlar (Radial Gradients):
+
+   Radial gradyanlar, renkleri belirli bir merkezden dışa doğru daire şeklinde yayarak birleştirir.
+
+ .radial-bg {
+     background: radial-gradient(circle, #FF0000, #00FF00);
+    /* Kırmızıdan yeşile geçiş */
+}
+Başka bir örnek:
+
+ .radial-bg {
+     background: radial-gradient(circle, #FF0000, #0000FF);
+    /* Kırmızıdan maviye daire şeklinde gradyan */
+}
+ .circle-bg {
+     background: radial-gradient(circle at center, #00FF00, #000000);
+    /* Yeşilden siyaha merkezde daire gradyan */
+}
+Arka Plan Rengi
+
+ body {
+     background-color: #F5F5F5;
+    /* Açık gri arka plan rengi */
+}
+ .section {
+     background-color: #EFE0B7;
+    /* Soluk altın sarısı arka plan */
+}
+Arka Plan Resimleri:
+
+ .hero-section {
+     background-image: url("hero-image.jpg");
+    /* Kahraman arka plan resmi */
+     background-size: cover;
+    /* Resmi arka plana tam sığdırma */
+}
+ .header {
+     background-image: url("header-background.png");
+    /* Başlık arka plan resmi */
+     background-repeat: no-repeat;
+    /* Resmi yatay ve dikey yönde tekrar etme */
+}
+Arka Plan Desenleri:
+
+ .pattern-bg {
+     background-image: url("pattern.png");
+    /* Desenli arka plan resmi */
+     background-repeat: repeat;
+    /* Deseni yatay ve dikey yönde tekrar etme */
+}
+ .striped-bg {
+     background-image: url("stripes.png");
+    /* Çizgili arka plan resmi */
+     background-repeat: repeat-x;
+    /* Çizgileri yatayda tekrar etme */
+}

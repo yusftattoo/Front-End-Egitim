@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display { /*Display özelliği, bir elemanın görüntülenip 
+            görüntülenmeyeceğini veya nasıl görüntüleneceğini belirtir*/
+            background-color: aquamarine;
+        }
+        .inline {
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            display:  inlene;
+            /*
+            display: inline ile karşılaştırıldığında, en büyük fark,
+            display: inline-block öğesinin
+             öğe üzerinde bir genişlik ve yükseklik ayarlamasına izin vermesidir.*/
+             /*
+             display: inline-block ile üst ve alt kenar boşlukları/dolguları dikkate alınır,
+              ancak display: inline ile dikkate alınmaz.
+             */
+             /*display: inline-block öğesinin öğeden sonra satır sonu eklemez*/
+        }
+        .inline-block-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;    
+            background-color: yellow; 
+        }
+        .block {
+            display: block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;    
+            background-color: yellow; 
+        }
+        .none { 
+            display: none;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        /*elemanları yanyana  hizalandırmak, sutn satır değişikliği, boyutlandırmak gibi */
+        .flex{
+            display: flex; /* div elemanları blok olarak alt alta gelir 
+            fakat flex ile yanyana geldi*/
+            background-color: #fac4c4;
+            gap: 10px; /* her elementin arasına bosluk verir*/ 
+            padding: 10px;
+        }
+        .flex div{
+            background-color: #fff; /* divlerin alanını belli etmek için renk verildi*/
+            width: 75px; /* uzunluk verilmezse kendi uzunlukları kadar yer kaplar*/
+            font-size: 22px;
+            line-height: 75px;
+            text-align: center;
+            gap: 10px 20px; /*10px : yatay bosluk / 20px dikey bosluk*/
+        }
+
+        .grid{
+              display: grid;
+            background-color: #139fb8;
+            gap: 10px; /* her elementin arasına bosluk verir*/ 
+            padding: 10px;
+        }
+        .grid div{
+            font-size: 32px;
+            line-height: 75px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+
+
+        
+    </style>
+
+    <h1>The display Property</h1>
+
+    <h2>display: inline</h2>
+        <div> liquam erat <span class="display">Aliquam</span> <span class="display">venenatis</span> gravida 
+            nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. 
+            <p>Elemanların blok düzeninde, satır içi düzeninde veya diğer düzenlerde görüntülenmesini kontrol eder. 
+                Display özelliği, HTML elemanlarını düzenlemenin yanı sıra içerik akışını kontrol etmek ve sayfa düzenini oluşturmak için önemli bir rol oynar.</p>
+        </div>
+    <h3> Inline-Block Düzen (display: inline-block):</h3>
+        <div>
+            <p>inline-block değeri, bir elemanın satır içinde görüntüleneceği, 
+                ancak blok düzenine özgü özelliklere sahip olacağı anlamına gelir. 
+                Yani, inline-block düzende bir eleman diğer elemanların yanına sığacak şekilde görüntülenir 
+                ve içerik kutusu, blok düzende olduğu gibi genişlik ve yükseklik özelliklerini alır.</p>
+        </div>
+
+    <h2>display: display-inline</h2> 
+        <div> Lorem. <span class="display inline">Aliquam</span> <span class="display inline">venenatis</span> gravida nisl sit
+            amet facilisis. Nullam cursus fermentum velit sed laoreet. 
+        <p>inline değeri, elemanların satır içinde, içeriği tarafından sınırlı olarak
+             görüntüleneceği anlamına gelir. Yani, inline düzende bir eleman diğer elemanların 
+            yanına sığacak şekilde görüntülenir ve satırın tam genişliğini kaplamaz.</p>
+            <button class="inline-block-button">Düğme 1</button>
+            <button class="inline-block-button">Düğme 2</button>
+            <button class="inline-block-button">Düğme 3</button>
+            <div>Aliquam erat volutpat. <span class="inline-block-button">Aliquam</span> <span class="inline-block-button">venenatis</span> gravida nisl sit amet facilisis.
+                Nullam cursus fermentum velit sed laoreet. </div>
+
+        </div>
+
+    <h2>display: display-block / ****************</h2>
+        <div>  Aliquam erat. <span class="display inline-block">Aliquam</span> <span class="display inline-block">venenatis</span> gravida
+            nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+            <h2>display: block</h2>
+                <p>block değeri, elemanların bir satırda tek başına yer alacağı 
+                    ve satırın tam genişliğini kaplayacağı anlamına gelir.
+                    Yani, bir blok düzenine sahip bir eleman diğer elemanların yanına yerleştirilmez 
+                    ve bir sonraki elemandan alt satıra geçer.</p>
+                <div>Aliquam erat volutpat. <span class="display  block">Aliquam</span> <span class="display  block">venenatis</span> gravida nisl sit amet facilisis.
+            Nullam cursus fermentum velit sed laoreet. </div>
+        <h2>display: none</h2>
+                <div>Bu satır sonunda bir kelime gizlendi. <span class="display none ">Aliquam</span> <span class="display  none">venenatis</span> gravida nisl sit amet facilisis.
+                    Nullam cursus fermentum velit sed laoreet. </div>
+        <h2>display: hidden</h2>
+                <div>Bu satır sonunda bir kelime gizlendi. <span class="display hidden ">Aliquam</span> <span class="display  hidden">venenatis</span> gravida nisl sit amet facilisis.
+                Nullam cursus fermentum velit sed laoreet. </div>
+
+
+                    <h2>Flexbox Layout</h2>
+                    <p>CSS Flexbox Layout, web sayfalarının düzenini oluşturmak 
+                        ve içerikleri esnek bir şekilde hizalamak için kullanılan bir CSS düzen modelidir. 
+                        "Flexbox" olarak da bilinen bu yöntem, içeriği satır ve sütunlarda düzenleyebilme yeteneği sunar.
+                         Flexbox, responsive (duyarlı) tasarımlar oluşturmak 
+                         ve sayfa düzenini dinamik olarak değiştirmek için ideal bir araçtır.  </p>
+                    <h2>display: flex</h2>
+                    <p>flex düzenine sahip bir konteyner içinde yer alan üç kutuyu
+                         hizalamak ve aralarına boşluk bırakmak için flex düzenini kullanır.</p>
+                         <pre>
+                            - Flex Container: Flex Container, 
+                            içerisindeki elemanları esnek bir düzen içinde düzenlemek için kullanılan bir HTML elemanıdır.
+                             Bir elemanı Flex Container yapmak için, onun üzerine display: flex; özelliğini uygulamamız gerekir.
+
+                            - Flex Items: Flex Items, Flex Container içindeki elemanlardır 
+                            ve bu elemanlar Flex Container tarafından yönetilen esnek düzende hizalanır.
+                            Flex Container'ın doğrudan alt öğeleri Flex Items olarak kabul edilir.
+                        </pre>
+            <h3>Container</h3>
+            <div class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+       </div>
+       <h3>The Flex-direction Property</h3>
+       <div class="flex" style="flex-direction:row  ;">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>1</div>
+            <div>2</div>
+        </div>
+    
+    <h3>The Flex-direction Property</h3>
+       <div class="flex" style="flex-direction:column ;">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+            <strong> class in yanına style ile:</strong>
+          <pre>
+            colmn dersek sutün olarak aşağı sıralar
+            row eklersek sağa doğru sıralar
+            row-reverse yaparsak sağdan sola yazar. soldaki başlangıcı sağda yazarak sagdan başlartır 3 2 1 şeklinde.
+            flex-wrap; wrap yazarsak satıra sığmayan div sayı kutularını aşağı satırlara ekler
+            justify-content: center; sag ve soldan ortalarız.
+                end : satır sonuna atar. 
+                space-around:  her elementin sag ve sol yanlarına eşit boşluk paylaşatırır. 
+                    iki element arası çift bosluk olur. 
+                space-evenly; eşit boşluk verir       
+            dikey hizlamada herhangi bir item verilmemişse heigt ile verilecek yüksekliğe göre yükseklik verir
+                eger align items: center verilirse verilen yüksekliği baz alarak kutuları merkeze eşit oranlıyor
+          </pre>
+          <pre>
+            III. Flex Container İçin Özellikler
+
+            Bir Flex Container'ı oluşturmak için kullanılan temel özellikler şunlardır:
+            - display: flex;: Bir HTML elemanını Flex Container haline getirmek için kullanılır.
+            - flex-direction: Flex Items'ların düzenlenme yönünü belirler (row, column, row-reverse veya column-reverse).
+            - flex-wrap: Flex Items'ların sığmayacak kadar büyük olduğunda nasıl sıralanacağını belirler (nowrap, wrap, wrap-reverse).
+            - flex-flow: flex-direction ve flex-wrap özelliklerini tek bir özellik olarak belirlemek için kullanılır.
+            - justify-content: Flex Container içindeki elemanların yatay (ana eksen) yönde nasıl hizalanacağını belirler (flex-start, flex-end, center, space-between, space-around veya space-evenly).
+           - align-items: Flex Container içindeki elemanların dikey (çapraz eksen) yönde nasıl hizalanacağını belirler (flex-start, flex-end, center, baseline veya stretch).
+            - align-content: Birden fazla satırı olan Flex Container'ın dikey yönde nasıl hizalanacağını belirler (flex-start, flex-end, center, space-between, space-around veya stretch).
+            IV. Flex Items İçin Özellikler
+            Bir Flex Item'ı oluşturmak için kullanılan temel özellikler şunlardır:
+            - order: Flex Item'ın sıralanma önceliğini belirler (-1, 0, 1, 2,...).
+            - flex-grow: Flex Item'ın diğer öğelere göre ne kadar büyüyeceğini belirler (0 veya pozitif bir sayı).
+            - flex-shrink: Flex Item'ın diğer öğelerle çakıştığında ne kadar küçüleceğini belirler (0 veya pozitif bir sayı).
+            - flex-basis: Flex Item'ın başlangıç genişliğini belirler (auto, px, %, em, vb.).
+            - flex: flex-grow, flex-shrink ve flex-basis özelliklerini tek bir özellik olarak belirlemek için kullanılır.
+            - align-self: Bir Flex Item'ın dikey yönde nasıl hizalanacağını belirler (auto, flex-start, flex-end, center, baseline veya stretch).
+          </pre>
+        <h3>justify content</h3>           
+         <p>içerğin  yatayda hizanlanması ile alakalı</p>
+         <div class="flex" style="justify-content: center;">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+         </div>
+        <h3>the align-item propert</h3>
+            <p>dikeyde elemanların hizanlanması ile ilgili</p>
+          
+            
+        
+        <h3>align-contents Property</h3>
+          <div class="flex" style="height: 200px; flex-wrap: wrap; align-content: center;">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+          </div>
+        
+            <pre>
+            <strong>flex-wrap align contents</strong> olduğunda fazla eleman nedeni ile iki satır oluşur iki satırı bir bütün  olarak kabul eder.
+            <strong>style içine start</strong> eklenirse tek olarak kabul ettiği iki satırı en üste hizalar.
+            <strong>end</strong> eklersek iki satırı en aşağı taşıyacaktır.
+
+            <strong>align-item center</strong>  olduğunda fazla eleman nedeni ile iki satır oluşur iki satırı iki farklı satır olarak kabul eder.
+            <strong>style içine start</strong> eklenirse çift olarak kabul ettiği iki satırın arasında tekli satır komutu olarak algılar.
+            <strong>end </strong>dersen çift satırı aşağı taşarı satırlar arasında boşluk bırakır.
+        </pre>
+    <h3>The order Property</h3>
+            <div class="flex">
+                <div>2</div> <!-- style order -1 eklenirse en başa gönderir / manuel numaralandırma ile sırasını değiştirebliriz -->
+            <div>3</div>
+            </div>      
+    <h3>The flex-grow Property</h3>
+            <div class="flex">
+                <div>1</div> <!--style ile flex grow 1 eklenirse hangi satıra eklenir o satır kalan boşluğu kaplıyor / veya paylaşıyor.
+                numaraları 1 yerine 2 3 4 gibi farklı yaparsak kaplamak istediği bosluğun fazlalığın belirtir.-->
+                <div>2</div> 
+                <div>3</div>
+            </div>
+        <h3>The flex-shrink Property</h3>
+            <div class="flex">
+                <div>1</div> 
+                <div>2</div> 
+                <div style="flex-shrink: 30; width: 300px;">3</div> 
+                    <!--öğeyi sıkıştırma veya genişletme
+                    öğenin diğerlerinden üç kat daha fazla küçülmesine izin verin.
+                    widht ile alacağı alanı genişletme olarak tersini komut verilir-->
+                <div>1</div> 
+                <div>2</div> 
+                <div>3</div>
+                <div>1</div> 
+                <div>2</div> 
+                <div>3</div>
+            </div>
+        <h3>The flex-basis Property</h3>
+                <!-- width yerine kullanılabiliyor bu neden ile karıştırılıyor
+                flex-basis özelliği, esnek bir öğenin başlangıç ​​uzunluğunu belirtir.
+                Not: Öğe esnek bir öğe değilse, flex-basis özelliğinin hiçbir etkisi olmaz.
+                ögeler genişlik için kullanılıyorsa genişletir uzunluk için kullanılıyor uzatır-->
+            <div class="flex">
+                <div>1</div> 
+                <div>2</div> 
+                <div>3</div>
+            </div>
+        <h3>The align-self Property</h3> <!--elemanın kendisini hizalar. -->
+            <div class="flex" style="height: 200px;"> <!-- aling items: start tüm elemanlar için uygular-->
+                <div >1</div> <!-- istediğimiz yuksekliği verebiliriz-->
+                <div >2</div> <!-- istediğimiz genişliği verebiliriz-->
+                <div style="align-self: center;">3</div> <!-- elementi kendisi için uygular-->
+                <div>4</div>
+            </div>
+    <h2>The display: grid; </h2>
+            <p> bir elemanın ızgara düzeninde görüntülenmesini sağlar. Grid düzeni,
+                içerikleri satır ve sütunlar arasında düzenlemek ve hizalamak için kullanılır</p>
+        <h3>Container</h3>
+            <div class="grid">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        <h3>The  grid-template-columns Property </h3>
+         <!-- yapmak istediğimiz sutün kadar ölçü verebildiğimiz bir yer.
+          column yazısından sonra ne kadar değer girersek 1 2 3. olarak emir verir.
+          kutular arasındaki boslugu style stili içinden ki gaptan ayarlanır
+          autodan sonra px ile bir değer vererek stün boyutlarını ayarlayabilirz.
+          -->
+
+        <div class="grid" style="grid-template-columns: auto auto;"> 
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+            <h3>The  grid-template-columns Property </h3>
+            <!-- aouto olması kutunu kendi yükesekliğine baglı ayar yapmasını sağlar
+            çok düşük px verirsek anadiz içerinde konumlanan sayılar,
+            divin düşük değeri verilmesi nedeni ile sışarı taşabilir.-->
+
+            <div class="grid" style="grid-template-columns: auto 50px 800px; "> 
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <h3>the justify-content Property</h3>
+            <div class="grid" style="justify-content:
+            center; grid-template-columns: 100px 100px 100px 200px;">
+            <!-- içerikler ortalandı, içeriği yatay hizalamak için justify-content --> 
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        <h3>the align-contents Property</h3>
+            <div class="grid" style="   grid-template-columns: auto auto auto ;
+                height: 200px; align-content: center;">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+            <h3>The gird-column Property</h3> <!--col dikey eksende işlem yaptı-->
+            <div class="grid" style="grid-template-columns: auto auto auto;">
+            <div>1</div> <!-- 5 kutu old. için bir kutuluk boşluk var bu boşluğu 1. numaryı 2 boyut büyüterek kapattık-->
+            <div>2</div>
+            <div>3</div>
+            <div  style="grid-column: 1 / span 2;">4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            </div>
+        <!-- grid column ve grid row = col span ve row span i temsil ediyor-->
+        <h3>The gird-row Property</h3> <!--row yatay eksende işlem yaptı-->
+            <div class="grid" style="grid-template-columns: auto auto auto;">
+            <div style="grid-row: 1 / span 2 ;">1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            </div>
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

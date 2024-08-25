@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+    <style>
+        table, th, td{
+            border: 1px solid   rgb(226, 14, 14);
+        }
+        table{
+            min-width: 300px;
+             border-collapse: collapse ; /*border ile hücreler arasında oluşan bosluğu kaldırıyor*/
+        }
+        th{
+            padding:  20px;
+            font-weight: bold;
+           background-color: #75c3f7;
+           text-align: left;
+        }
+        td{
+            padding: 8px 16px;
+           font-size: 300%;
+        }
+        caption{
+            font-size: 24px;
+            font-weight: bold;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>HTML Tables</h1>
+    <table >
+        <caption>Table</caption>
+        <colgroup> <!--   -->
+            <col span="2" style="background-color: aquamarine;">
+            <col style="background-color: antiquewhite;">
+            <col style="background-color: bisque;">
+        </colgroup>
+        <thead> 
+            <tr>
+                <th>Pazartesi</th>
+                <th>Sali</th>
+                <th>Carsamba</th>
+                <th>Persembe</th>
+                <th>Cuma</th>
+                <th>Cumartesi</th>
+                <th>Pazar</th>
+            </tr>
+            
+        </thead> 
+        <tbody> <!--   -->
+            <tr> <!--  -->
+               <td colspan="2">1</td> <!--  -->
+               <!-- <td>2</td> -->
+               <td rowspan="2">3</td> <!--  -->
+               <td>4</td>
+               <td>5</td>
+               <td>6</td>
+               <td>7</td>
+           </tr>
+           <tr>
+               <td>8</td>
+               <td>9</td>
+               <td>10</td>
+               <td>11</td>
+               <td>12</td>
+               <td>13</td>
+               <td>14</td>
+            </tr>
+           <tr>
+               <td>15</td>
+               <td>6</td>
+               <td>17</td>
+               <td>18</td>
+               <td>19</td>
+               <td>20</td>
+               <td>21</td>
+            </tr>
+
+            
+        </tbody>  
+
+        <div> 
+             <ul>
+            <li><a href="index.html">Pages</a></li>
+        </ul>
+            <h1>Tablo Ogeleri</h1>
+            <p><code>&lt;Table&gt;</code>Bir tablo tanimlar</p>
+            <p><code>&lt;th&gt;</code>Taloda bir baslik hucresi tanimlar</p>
+            <p><code>&lt;tr&gt;</code>Tabloda bir satir tanimlar</p>
+            <p><code>&lt;td&gt;</code>Tabloda bir hucreyi tanimlar</p>
+            <p><code>&lt;caption&gt;</code>Bir talo basligi tanimlar</p>
+            <p><code>&lt;colgroup&gt;</code>Bicimlendirme icin tabloda bir veya daha fazla sutundan olusan bir group belirtir</p>
+            <p><code>&lt;col&gt;</code>Bir &lt;colgroup&gt; ogesi icindeki het sutun icin sutun ozelliklerini belirtir</p>
+            <p><code>&lt;thead&gt;</code>Baslik icerigini bir tabloda gruplar</p>
+            <p><code>&lt;tbody&gt;</code>Govde icerigini bir tabloda gruplar</p>
+            <p><code>&lt;tfoot&gt;</code> Altbilgi icerigini bir taloda gruplar</p>
+        </div>
+    </body>
+    </html>

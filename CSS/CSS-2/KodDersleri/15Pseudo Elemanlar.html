@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo </title>
+    <style>
+        a:hover{ /*mouse üzerine gelince bu aktif olur*/
+            color: beige;
+        }
+        a:active{ /* tıkladığımızda bu aktif olur*/
+            color: rgb(221, 30, 4);
+        }
+        input:disabled{ /* input[disable] olaraktan çağırılabilir.  */
+           background-color: rgb(188, 235, 134);
+        }
+        /* stillerde okuma sırası vrdır. bu önceliği !important yazarak değiştirebiliriz.*/
+        /* bu elemena dışında */
+        input:not(.name){ /* inputların hepsini bir still tanımlandı. not(.name) ile name clası olarak element hariç işlemi yapıldı   */
+           background-color: rgb(196, 44, 150);
+        }   
+        li:nth-child(3n){ /* tek bir eleman seçilebilir veya tekli(3n) çiftli(2n) elemanlar seçilebilir.*/
+            background-color: #e7b0b0;
+        }
+        .c1::first-line{ /* ilk satırı seçiyor ve stillendiriyor*/ 
+            color: aquamarine;
+        }
+        .c2::before{
+            content:'oncesi';
+            content:'oncesi';
+            width: 10px;
+            height: 20px;
+            background-color: #df5353;
+            border-radius: 20px; /* köşe kenarları şekillendirir*/
+            
+        }
+        /* bu ikisi clas ile değiştirilmez*/
+        .c2::after{
+            content:'sonrası';
+            width: 10px;
+            height: 20px;
+            background-color: #f51d1d;
+            border-radius: 10px; /* köşe kenarları şekillendirir*/
+        }
+        ::selection { /* global bir özellik tüm metinler için kullanılıyor
+            arka plan verilen renk seçilen kelimeleri seçilen renge çeviyiro*/
+            color: aqua;
+            background-color: #eb6868;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS Pseudo </h1>
+    <h2>Css Pseudo-class</h2>
+        <h3>:active</h3>
+            <p> <a href="">Bağlantıya tıkla</a></p>
+        <h3>:hover</h3>
+            <p><a href="">Bağlantının üzerine gel</a></p>
+        <h3>:disabled</h3> <!-- özünde bir attributes tir. style içerisinde input[disable] olarak ta stillendirileblir.-->
+            <input type="text" disabled>
+        <h3>:not(selector)</h3> <!-- özünde bir selector dur.. class name i kaldırınca still uygulamama işlemiiptal olyor-->
+            <input type="text" class="name">
+        <h3>:nth-child</h3>
+            <ul>
+                <li>Mersin</li>
+                <li>Adana</li>
+                <li>İzmir</li>
+                <li>İstanbul</li>
+                <li>Eskişehir</li>
+                <li>Ankara</li>
+            </ul>
+    <h2>CSS Pseudo-element</h2>    
+        <h3>::first-line</h3>   <!-- ilk satırı şekillendirme olarak kullanılıyor-->
+            <p class="c1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptatem distinctio commodi 
+            ipsum minima iusto eius explicabo fugiat ratione. Dignissimos?</p>
+        <h3>::before & ::after</h3>
+            <p class="c2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Omnis enim porro, temporibus laboriosam praesentium veritatis 
+                officia suscipit ea voluptatibus amet, cupiditate 
+                quia deleniti perspiciatis mollitia ad ut aut commodi dolores.</p>
+        <h3>::selection</h3>
+        <p class="c3"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Reiciendis, asperiores. Placeat, numquam quisquam distinctio 
+             nobis minima totam expedita voluptatibus, atque
+             tempore accusantium ut. Nostrum, quae esse! Nam culpa optio magni?</p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funtion</title>
+    <style>
+       .calc{
+        width: calc(50%  + 50px); /* %lik olarka verilen değer 
+        üzerin her zaman 50px eklenir,
+         bu sadece calc özelli ile verilir*/
+        height: 50px;
+        background-color: aquamarine;
+       } 
+       .max {
+        width: max(10%);
+        height: 50px;
+        background-color: rgb(240, 53, 209);
+       }
+
+       .rgba {
+        width:  (10%);
+        height: 50px;
+        background-color: rgba(167, 149, 164, 0.25);
+       }
+       :root {
+         --primary-color: red;
+         --height: 100px;
+       } /* bu still, style içerisinde değişkenlere ortak 
+       ve kolay özellikle eklemek için kullanılır.
+       bunu enregre etmek için 
+       height 100px verildiyse diğer still içerisinde
+        height e tanımlama yapılır : var(--height) olarak  tanımlanmalıdır. */
+
+    </style>
+</head>
+<body>
+    <h1>CSS Functoin</h1>
+        <h2>calc(unit)</h2>
+        <div class="calc"></div>
+        <h2>max(value1, value2)</h2>
+        <div class="max"></div>
+        <h2>rgba(red, green, blue)</h2>
+        <div class="rgba">Lorem ipsum dolor sit amet.</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadow</title>
+    <style>
+.text-shadow{ /* 3. değer vererek bulanıklaştırılabilir*/
+    text-shadow: 20px 10px 1px rgb(121, 111, 111)
+}
+.box-shadow{ /* 3. değer vererek bulanıklaştırılabilir*/
+    text-shadow: 20px 10px 1px rgb(121, 111, 111)
+}
+.box-shadow {
+    width: 200px;
+    height: 100px;
+    border:1px solid lightcoral;
+    box-shadow: 10px 20px 5px;
+}
+.box-shadow-inset {
+    width: 200px;
+    height: 100px;
+    border:1px solid lightcoral;
+    box-shadow: inset 0px 0px 15px blue;
+}
+    </style>
+</head>
+<body>
+    <h1> CSS Shadow    </h1>
+    <h2>Text shadow</h2>
+    <h2 class="text-shadow">Text golgelendirme efekti</h2>
+    <h2>box shadow</h2>
+        <h3>outside</h3>
+             <div class="box-shadow"></div>
+        <h3>inside</h3>
+            <div class="box-shadow-inset"></div>
+    
+
+</body>
+</html>

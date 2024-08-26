@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+        <style>
+            body { 
+                padding: 50px;
+            }
+            .transform {
+                width: 150px;
+                height: 150px;
+                background-color: #f3bfbf;
+            }
+            .translate{
+                transform: translate(100px, 50px);
+                /* margin: 150px 0 0 150px; yapıldığında yukarıdaki öge aşağı 
+                kaydığında üst üste binmiyor, aşağıdaki öğeyide hareket ettiriyor
+                fakat transform ile bu gerçekleşmiyor üstüste biniyor. */
+            }
+            .scale{
+                transform: scale(1.7, 1);
+            } /* iki yandan aynı ölçüde boyutlandırır
+                farklı stillerin açılır kapanır gölgelendirme gibi özellikleri birleştirilebilir
+                or. .scale:hover eklenirse, mouse üzerine geldiğinde  verilen ölçülerde büyüme saglıyor */
+
+            .rotate{
+            transform: rotate(20deg);
+            /* 360 derece ile hesaplama yapıldığı için derece ölçüsü verilir */
+            }
+        </style>
+</head>
+<body>
+    <h1>CSS Transforms</h1>
+    <h2>Translate() Method</h2>
+    <div class="transform translate"></div>
+    <br>
+    <div class="transform "></div>
+    <h2>The Scale() Method</h2>
+    <div class="transform scale "></div>
+    <h2>The rotate() Method</h2>
+    <div class="transform rotate "></div>
+</body>
+</html>

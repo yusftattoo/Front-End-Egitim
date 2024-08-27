@@ -4,9 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./gridview.css">
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <h1>Layout</h1>
+    <header id="header">
+        <div class="container">
+            <div class="row center">
+                <div class="col-xs col-sm-3">
+                    <img class="logo" src="https://placehold.co/600x400" alt="patika logos" width="200px" height="38">
+                </div>
+                <div class="col-xs col-sm-9">
+                    <nav id="nav">
+                        <a class="nav-item" href="#">Menu 1</a>
+                        <a class="nav-item" href="#">Menu 2</a>
+                        <a class="nav-item" href="#">Menu 3</a>
+                        <a class="nav-item" href="#">Menu 4</a>
+                        <a class="button" href="#">Button</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="row center">
+            <div class="col-xs-12 col-sm-6"> <!-- mobilde ikisinin alt alta gelmesi için, fakat tablet ve üzeri cihazlarda %50 olsun-->
+                <div class="hero-caption">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <a class="button" href="#">Call to Action</a>
+                </div>
+            </div>   
+            <div class="col-xs-12 col-sm-6  "> <!-- -->
+                <img class="hero-image" src="https://placehold.co/600x400?text=(_-_)" alt="hero-image" width="750" height="auto">
+            </div>   
+        </div>
+    </div>
+    <section class="section white">
+        <h2 class="section-title">About</h2>
+        <div id="about">
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, ducimus?</p>  
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2 class="section-title">Latest Blog</h2>
+        <div class="container">
+            <div class="row" id="about">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="blog ">
+                        <img src="https://placehold.co/600x400?text=/" alt="Blog Image" width="400"  height="250">
+                        <!-- kutuya iç boşluk verebilmek için element oluşuruldu-->
+                         <div class="blog-content">
+                            <h3>Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur.
+                                Lorem ipsum dolor sit.</p>
+                            <a  class="button" href="#">Learn More</a>
+                         </div>
+                    </article>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="blog">
+                        <img src="https://placehold.co/600x400?text=/\" alt="Blog Image" width="400"  height="250">
+                        <!-- kutuya iç boşluk verebilmek için element oluşuruldu-->
+                         <div class="blog-content">
+                            <h3>Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit  Lorem, ipsum dolor. Quae, debitis.</p>
+                            <a  class="button" href="#">Learn More</a>
+                         </div>
+                    </article>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="blog">
+                        <img src="https://placehold.co/600x400?text=\" alt="Blog Image" width="400"  height="250">
+                        <!-- kutuya iç boşluk verebilmek için element oluşuruldu-->
+                         <div class="blog-content">
+                            <h3>Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            <p>Lorem, ipsum.</p>
+                            <a  class="button" href="#">Learn More</a>
+                         </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <h2 class="section-title">gelecek</h2>
+        content
+    </section>
+
+
+
+    <!-- <div class="col-xs-12 col-sm-6 col-md-4"></div>
+    <div class="col-xs-12 col-sm-6 col-md-8"></div> -->
+
+    
+
+
+
+    <h1>Responsive Layout</h1>
         <p>Web sitesi genellikle header,nev,content,footer ortak alanları tek bir yerde tasarladığımız şeydir</p>
         <pre>
             <strong>header:</strong> Web sitesini ne üstnde yer alan başlık, genellikle logo veya website adı içerir
@@ -14,10 +117,10 @@
             <strong>Content:</strong> Düzen, genellikle hedef kullanıcılara bağlıdır.
             <strong>footer:</strong> Alt bilgi safamızın en altında yer alır. Genellikle telif hakkı bilgileri içeren kısımdır.
         </pre>
-    <h1>Respinsive Web Design</h1>
+    <h1>Respinsive Web Layout</h1>
         <pre>
            Duyarlı Web tasarım, çalıştırıldığı cihaza - görüntülenme boyutune göre şekilde ve görüntüsü bütün cihazlarda uyumlu şekilde çalışmasını sağlayan yapıdır. 
         </pre>    
-     
+
 </body>
 </html>

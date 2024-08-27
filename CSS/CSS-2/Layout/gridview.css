@@ -1,0 +1,266 @@
+.container,
+.container-fluid {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.row{
+    display: flex; /* flex elementimiz oluyor*/
+    flex-direction: row; /* başka bir yerden ezilmesine karşı row eklendi*/
+    flex-wrap: wrap; /* taşan elementler aşağıya düşsün*/
+    margin-left: -8px; /* boxlar arasında boşlukların sadece içeride olması ve kenardan verilmemesi için left right -8 verildi*/
+    margin-right: -8px;
+}
+/* içerideki elementleri dikey hizamalamk için kullanılır*/
+.row.center{
+    align-items: center;
+}
+
+[class*="col-"] { /* col ile başlayan butun stunlara bu yazacağım  elementlere uygulaması için kullanılır*/
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+/*4 farklı sutin yapılacak, pc tablet mobil ve büyük ekranlar için*/
+.col-xs{
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+    
+}
+/* 12 stun sisteminde bulunduğu alanı 12 ebölüp bir parçasını alır*/
+.col-xs-1{
+    flex-basis: 8.3%; /* %100 ü 12 e bölüp bir dilimi buraya veriyoruz*/
+
+}
+.col-xs-2{
+    flex-basis: 16.6%; /* iki stun yer kaplaması için */
+}
+.col-xs-3{
+    flex-basis: 25%; /*   */
+}
+.col-xs-4{
+    flex-basis: 33.3%; /*   */
+}
+.col-xs-5{
+    flex-basis: 41.6%; /*   */
+}
+.col-xs-6{
+    flex-basis: 50%; /* 15 dilimlik parçanın 6 sı yarısı %50dir  */
+}
+.col-xs-7{
+    flex-basis: 58.3%; /*  */
+}
+.col-xs-8{
+    flex-basis: 66.6%; /*  */
+}
+.col-xs-9{
+    flex-basis: 75%; /*  */
+}
+.col-xs-10{
+    flex-basis: 83.3%; /*  */
+}
+.col-xs-11{
+    flex-basis: 91.6%; /*  */
+}
+.col-xs-12{
+    flex-basis: 100%; /*  */
+}
+ /*min ve max width verebiliriz. orn. 1000px ile 2000px arasında css kodum çalışsın demek için @media kullanılır   */
+ /*kullanacağımız cihazları belirlemiş oluyoruz 
+body mizin fontsize ından referans alıyor 16x48= 768px modern 
+sisteme mobilin max boyutudur. diğer ölçülendirmeler de aynı şekilde
+farklı rem ler ile eklenir ve max. olarak aldığımız ekran boyutu farklı
+bir cihazın minimumu olarak ölçülendirilmiş olur bu şekilde 
+mobilde 768 i geçtiğinde 769 olduğunda bu ekranın 
+tablet olarak tanımlandığını gösterir ve buna uygun çalışma yürütür */
+/*48rem = 768*/
+@media (min-width: 48rem) {
+    .container {
+        width: 738px;
+    }
+    .col-sm{
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+        
+    }
+    /* flex elementnin içindeki elemana göre uzunluğu değiştirme sorunu nedeni ile max-width eklenir */
+    /* 12 stun sisteminde bulunduğu alanı 12 ebölüp bir parçasını alır*/
+    .col-sm-1{
+        max-width: 8.3%; /* %100 ü 12 e bölüp bir dilimi buraya veriyoruz*/
+        flex-basis: 8.3%; /* %100 ü 12 e bölüp bir dilimi buraya veriyoruz*/
+    
+    }
+    .col-sm-2{
+        max-width: 16.6%; /* iki stun yer kaplaması için */
+        flex-basis: 16.6%; /* iki stun yer kaplaması için */
+    }
+    .col-sm-3{
+        max-width: 25%; /*   */
+        flex-basis: 25%; /*   */
+    }
+    .col-sm-4{
+        max-width: 33.3%; /*   */
+        flex-basis: 33.3%; /*   */
+    }
+    .col-sm-5{
+        max-width: 41.6%; /*   */
+        flex-basis: 41.6%; /*   */
+    }
+    .col-sm-6{
+        max-width: 50%; /* 15 dilimlik parçanın 6 sı yarısı %50dir  */
+        flex-basis: 50%; /* 15 dilimlik parçanın 6 sı yarısı %50dir  */
+    }
+    .col-sm-7{
+        max-width: 58.3%; /*  */
+        flex-basis: 58.3%; /*  */
+    }
+    .col-sm-8{
+        max-width: 66.6%; /*  */
+        flex-basis: 66.6%; /*  */
+    }
+    .col-sm-9{
+        max-width: 75%; /*  */
+        flex-basis: 75%; /*  */
+    }
+    .col-sm-10{
+        max-width: 83.3%; /*  */
+        flex-basis: 83.3%; /*  */
+    }
+    .col-sm-11{
+        max-width: 91.6%; /*  */
+        flex-basis: 91.6%; /*  */
+    }
+    .col-sm-12{
+        max-width: 100%; /*  */
+        flex-basis: 100%; /*  */
+    }
+}
+/* 64rem = 1024*/
+@media (min-width: 64rem) {
+    .container {
+        width: 994px;
+    }
+    .col-md{
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+        
+    }
+    /* 12 stun sisteminde bulunduğu alanı 12 ebölüp bir parçasını alır*/
+    .col-md-1{
+        max-width: 8.3%;
+        flex-basis: 8.3%; /* %100 ü 12 e bölüp bir dilimi buraya veriyoruz*/
+    
+    }
+    .col-md-2{
+        max-width: 16.6%; /* iki stun yer kaplaması için */
+        flex-basis: 16.6%; /* iki stun yer kaplaması için */
+    }
+    .col-md-3{
+        max-width: 25%; /*   */
+        flex-basis: 25%; /*   */
+    }
+    .col-md-4{
+        max-width: 33.3%; /*   */
+        flex-basis: 33.3%; /*   */
+    }
+    .col-md-5{
+        flex-basis: 41.6%; /*   */
+    }
+    .col-md-6{
+        max-width: 50%; /* 15 dilimlik parçanın 6 sı yarısı %50dir  */
+        flex-basis: 50%; /* 15 dilimlik parçanın 6 sı yarısı %50dir  */
+    }
+    .col-md-7{
+        max-width: 58.3%; /*  */
+        flex-basis: 58.3%; /*  */
+    }
+    .col-md-8{
+        max-width: 66.6%; /*  */
+        flex-basis: 66.6%; /*  */
+    }
+    .col-md-9{
+        max-width: 75%; /*  */
+        flex-basis: 75%; /*  */
+    }
+    .col-md-10{
+        max-width: 83.3%; /*  */
+        flex-basis: 83.3%; /*  */
+    }
+    .col-md-11{
+        max-width: 91.6%; /*  */
+        flex-basis: 91.6%; /*  */
+    }
+    .col-md-12{
+        max-width: 100%; /*  */
+        flex-basis: 100%; /*  */
+    }
+}
+/* 75rem = 1200px*/
+@media (min-width: 75rem) {
+    .container {
+        width: 1170px;
+    }
+    .col-lg{
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+    
+}
+/* 12 stun sisteminde bulunduğu alanı 12 ebölüp bir parçasını alır*/
+.col-lg-1{
+    max-width: 8.3%; /* %100 ü 12 e bölüp bir dilimi buraya veriyoruz*/
+    flex-basis: 8.3%; /* %100 ü 12 e bölüp bir dilimi buraya veriyoruz*/
+
+}
+.col-lg-2{
+    max-width: 16.6%; /* iki stun yer kaplaması için */
+    flex-basis: 16.6%; /* iki stun yer kaplaması için */
+}
+.col-lg-3{
+    max-width: 25%; /*   */
+    flex-basis: 25%; /*   */
+}
+.col-lg-4{
+    max-width: 33.3%; /*   */
+    flex-basis: 33.3%; /*   */
+}
+.col-lg-5{
+    max-width: 41.6%; /*   */
+    flex-basis: 41.6%; /*   */
+}
+.col-lg-6{
+    max-width: 50%; /* 15 dilimlik parçanın 6 sı yarısı %50dir  */
+    flex-basis: 50%; /* 15 dilimlik parçanın 6 sı yarısı %50dir  */
+}
+.col-lg-7{
+    max-width: 58.3%; /*  */
+    flex-basis: 58.3%; /*  */
+}
+.col-lg-8{
+    max-width: 66.6%; /*  */
+    flex-basis: 66.6%; /*  */
+}
+.col-lg-9{
+    max-width: 75%; /*  */
+    flex-basis: 75%; /*  */
+}
+.col-lg-10{
+    max-width: 83.3%; /*  */
+    flex-basis: 83.3%; /*  */
+}
+.col-lg-11{
+    max-width: 91.6%; /*  */
+    flex-basis: 91.6%; /*  */
+}
+.col-lg-12{
+    max-width: 100%; /*  */
+    flex-basis: 100%; /*  */
+}
+}
+

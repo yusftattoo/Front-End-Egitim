@@ -1,10 +1,12 @@
 .container,
 .container-fluid {
+    
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-left: 8px;
-    margin-right: 8px;
+    padding-left: 8px; 
+    padding-right: 8px; /* konyetnarı ortalayan elementler*/
+   
 }
 
 .row{
@@ -15,7 +17,7 @@
     margin-right: -8px;
 }
 /* içerideki elementleri dikey hizamalamk için kullanılır*/
-.row.center{
+.row .center{
     align-items: center;
 }
 
@@ -33,40 +35,64 @@
 }
 /* 12 stun sisteminde bulunduğu alanı 12 ebölüp bir parçasını alır*/
 .col-xs-1{
+    
+    max-width: 8.3%; /* %100 ü 12 e bölüp bir dilimi buraya veriyoruz*/
     flex-basis: 8.3%; /* %100 ü 12 e bölüp bir dilimi buraya veriyoruz*/
 
 }
 .col-xs-2{
+    
+    max-width: 16.6%; /* iki stun yer kaplaması için */
     flex-basis: 16.6%; /* iki stun yer kaplaması için */
 }
 .col-xs-3{
+    
+    max-width: 25%; /*   */
     flex-basis: 25%; /*   */
 }
 .col-xs-4{
+    
+    max-width: 33.3%; /*   */
     flex-basis: 33.3%; /*   */
 }
 .col-xs-5{
+    
+    max-width: 41.6%; /*   */
     flex-basis: 41.6%; /*   */
 }
 .col-xs-6{
+    
+    max-width: 50%; /* 15 dilimlik parçanın 6 sı yarısı %50dir  */
     flex-basis: 50%; /* 15 dilimlik parçanın 6 sı yarısı %50dir  */
 }
 .col-xs-7{
+    
+    max-width: 58.3%; /*  */
     flex-basis: 58.3%; /*  */
 }
 .col-xs-8{
+    
+    max-width: 66.6%; /*  */
     flex-basis: 66.6%; /*  */
 }
 .col-xs-9{
+    
+    max-width: 75%; /*  */
     flex-basis: 75%; /*  */
 }
 .col-xs-10{
+    
+    max-width: 83.3%; /*  */
     flex-basis: 83.3%; /*  */
 }
 .col-xs-11{
+    
+    max-width: 91.6%; /*  */
     flex-basis: 91.6%; /*  */
 }
 .col-xs-12{
+    
+    max-width: 100%; /*  */
     flex-basis: 100%; /*  */
 }
  /*min ve max width verebiliriz. orn. 1000px ile 2000px arasında css kodum çalışsın demek için @media kullanılır   */
@@ -148,8 +174,7 @@ tablet olarak tanımlandığını gösterir ve buna uygun çalışma yürütür 
     .col-md{
         flex-grow: 1;
         flex-basis: 0;
-        max-width: 100%;
-        
+        max-width: 100%; 
     }
     /* 12 stun sisteminde bulunduğu alanı 12 ebölüp bir parçasını alır*/
     .col-md-1{

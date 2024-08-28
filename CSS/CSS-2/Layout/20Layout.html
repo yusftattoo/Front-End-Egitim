@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./gridview.css">
     <link rel="stylesheet" href="./style.css">
-
+ 
 </head>
-<body>
+<body> 
     <header id="header">
         <div class="container">
             <div class="row center">
                 <div class="col-xs col-sm-3">
-                    <img class="logo" src="https://placehold.co/600x400" alt="patika logos" width="200px" height="38">
+                    <img class="logo" src="https://placehold.co/600x400" alt="patika logos" width="200px" 
+                     height="38">
                 </div>
                 <div class="col-xs col-sm-9">
                     <nav id="nav">
@@ -27,21 +28,29 @@
                         <a class="nav-item" href="#">Menu 4</a>
                         <a class="button" href="#">Button</a>
                     </nav>
+                    <button id="mobile-menu-button" class="button" >Menu></button>
                 </div>
             </div>
+        </div>
+         <div id="mobile-menu" style="display: none;">
+         <a  href="#">Menu 1</a>
+         <a  href="#">Menu 2</a>
+         <a  href="#">Menu 3</a>
+         <a  href="#">Menu 4</a>
         </div>
     </header>
     <div class="hero">
         <div class="row center">
             <div class="col-xs-12 col-sm-6"> <!-- mobilde ikisinin alt alta gelmesi için, fakat tablet ve üzeri cihazlarda %50 olsun-->
                 <div class="hero-caption">
-                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <h1>Great design is invisible</h1>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <a class="button" href="#">Call to Action</a>
                 </div>
             </div>   
-            <div class="col-xs-12 col-sm-6  "> <!-- -->
-                <img class="hero-image" src="https://placehold.co/600x400?text=(_-_)" alt="hero-image" width="750" height="auto">
+            <div class="col-xs-12 col-sm-6">
+                <img class="hero-image" src="https://placehold.co/600x400?text=(_-_)" 
+                alt="hero-image" width="750" height="auto">
             </div>   
         </div>
     </div>
@@ -52,19 +61,22 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, ducimus?</p>  
         </div>
     </section>
-    
+    <!-- lates blog-->
     <section class="section">
         <h2 class="section-title">Latest Blog</h2>
         <div class="container">
-            <div class="row" id="about">
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <article class="blog ">
-                        <img src="https://placehold.co/600x400?text=/" alt="Blog Image" width="400"  height="250">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4"> 
+                     <!--col-xs-12 = bulunduğu mobil ekranda tek bir sutün gösterir
+                      col-sm-6 bulunduğu tablet ekranında 2ye böler
+                      col-md-4 = bulunduğu geniş ekranı 4 e böler  3 tane gösterir-->
+                    <article class="blog">
+                        <img src="https://placehold.co/600x400?text=/" alt="Blog Image"
+                         width="400"  height="250">
                         <!-- kutuya iç boşluk verebilmek için element oluşuruldu-->
                          <div class="blog-content">
                             <h3>Lorem ipsum dolor sit amet.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur.
-                                Lorem ipsum dolor sit.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit.</p>
                             <a  class="button" href="#">Learn More</a>
                          </div>
                     </article>
@@ -86,8 +98,7 @@
                         <!-- kutuya iç boşluk verebilmek için element oluşuruldu-->
                          <div class="blog-content">
                             <h3>Lorem ipsum dolor sit amet.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur.</p>
-                            <p>Lorem, ipsum.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur. Lorem, ipsum.</p>
                             <a  class="button" href="#">Learn More</a>
                          </div>
                     </article>
@@ -95,10 +106,41 @@
             </div>
         </div>
     </section>
-    <section class="section">
-        <h2 class="section-title">gelecek</h2>
-        content
+    <section class="section white">
+        <h2 class="section-title">Our Happ Clients</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6" >
+                    <article class="comment">
+                        <p>Lorem, ipsum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, cum.</p>
+                        <img src="https://placehold.co/600x400?text=JD" alt="Comment Image" width="50" height="50">
+                        <h3>Jhon Doe</h3>
+                    </article>
+                </div>
+                <div class="col-xs-12 col-sm-6" >
+                    <article class="comment">
+                        <p>Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, cum.</p>
+                        <img src="https://placehold.co/600x400?text=JL" alt="Comment Image" width="50" height="50">
+                        <h3>JacquelLine Wright</h3>
+                    </article>
+                </div>
+            </div>
+        </div>    
     </section>
+    <footer id="footer">&copy: 2024 Responsive Layout</footer>
+    <!-- JS ileyazabilmek için script tagı acıldı-->
+    <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+
+        if  (menu.style.display === 'none') {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'block';
+        }
+    })
+
+    </script>
 
 
 
